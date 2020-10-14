@@ -41,6 +41,14 @@ bool Account::makeWithdrawal(int withdrawal)
 
 void Account::makeDeposit(int deposit)
 {
+	Account::_displayTimestamp();
+	Account::_totalAmount += deposit;
+	Account::_totalNbDeposits++;
+	this->_nbDeposits++;
+	std::cout << "index:" << this->_accountIndex << ";p_amount:" << this->_amount;
+	this->_amount += deposit;
+	std::cout << ";deposit:" << deposit << ";amount:" << this->_amount << ";nb_deposits:" \
+	<< this->_nbDeposits << std::endl;
 
 }
 
