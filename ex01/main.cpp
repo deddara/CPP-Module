@@ -3,17 +3,23 @@
 #include <iomanip>
 #include "Contact.class.hpp"
 
-void search_handler(Contact *cont, int i)
+inline bool is_integer(std::string & s)
 {
-	int			j = 0;
-	int 		id;
-	if (!i)
-	{
-		std::cout << "There are no contacts..." << std::endl;
-		return ;
-	}
-	std::cout << std::setw(10) << "index" << "|" << std::setw(10) << "first name" << "|" \
-	<< std::setw(10) << "last name" << "|" << std::setw(10) << "nickname" << std::endl;
+	char * p;
+
+	if (s.empty() || ((!isdigit(s[0])) && (s[0] != '-') && (s[0] != '+')))
+		return false;
+
+	strtol(s.c_str(), &p, 10);
+	return (*p == 0);
+}
+
+void search_input(Contact *cont, int i)
+{
+	int				j = 0;
+	std::string 	id;
+	int 			id_num = 0;
+
 	while (j < i)
 	{
 		cont[j].search_output(j);
@@ -22,15 +28,30 @@ void search_handler(Contact *cont, int i)
 	while (1) {
 		std::cout << "Enter index for contact details: ";
 		std::cin >> id;
-		if (id < 0 || id > i - 1) {
-			std::cout << "Wrong Id!" << std::endl;
+		if (is_integer(id) == 0){
+			std::cout << "not a num" << std::endl;
 			continue;
 		}
+		id_num = atoi(id.c_str());
+		if (id_num < 0 || id_num + 1 > i)
+			std::cout << "wrong id" << std::endl;
 		else {
-			cont[id].contact_output();
+			cont[id_num].contact_output();
 			break ;
 		}
 	}
+}
+
+void search_handler(Contact *cont, int i)
+{
+	if (!i)
+	{
+		std::cout << "There are no contacts..." << std::endl;
+		return ;
+	}
+	std::cout << std::setw(10) << "index" << "|" << std::setw(10) << "first name" << "|" \
+	<< std::setw(10) << "last name" << "|" << std::setw(10) << "nickname" << std::endl;
+	search_input(cont, i);
 }
 
 
