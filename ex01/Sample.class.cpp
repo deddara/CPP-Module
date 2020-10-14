@@ -14,7 +14,7 @@
 void 	Contact::add_contact(void) {
 
 	std::cout << "Enter first name: ";
-	std::getline (std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n') ,this->f_name);
+	std::getline (std::cin,this->f_name);
 	std::cout << "Enter last name: ";
 	std::getline (std::cin,this->l_name);
 	std::cout << "Enter nickname: ";
@@ -53,7 +53,7 @@ void 	Contact::search_output(int id) const {
 	}
 	if (l_name.size() > 10) {
 		l_name.resize(9);
-		f_name += '.';
+		l_name += '.';
 	}
 	if (nickname.size() > 10) {
 		nickname.resize(9);

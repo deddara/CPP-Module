@@ -7,12 +7,9 @@ void search_handler(Contact *cont, int i)
 {
 	int j = 0;
 
-	std::string str = "There are no contacts...";
-	str.resize(10);
-	str += '.';
 	if (!i)
 	{
-		std::cout << str << std::endl;
+		std::cout << "There are no contacts..." << std::endl;
 		return ;
 	}
 	std::cout << std::setw(10) << "index" << "|" << std::setw(10) << "first name" << "|" \
@@ -33,7 +30,7 @@ int		main(void)
 
 	while (i < 9) {
 		std::cout << "Enter command: ";
-		std::cin >> cmd;
+		getline(std::cin, cmd);
 		if (cmd.compare("EXIT") == 0)
 			return (0);
 		else if (cmd.compare("ADD") == 0)
@@ -55,28 +52,3 @@ int		main(void)
 
 	return (0);
 }
-
-
-//int main(void)
-//{
-//	Sample example;
-//	Sample	*examplep = &example;
-//	std::string str;
-//
-//	int 	Sample::*p = NULL;
-//	void 	(Sample::*f)(void)const;
-//
-//	p = &Sample::foo;
-//
-//	std::cin >> str;
-//	std::cout << example.foo << std::endl;
-//	example.*p = 32;
-//	std::cout << example.foo << std::endl;
-//	examplep->*p = 42;
-//	std::cout << example.foo << std::endl;
-//
-//	f = &Sample::func;
-//	(example.*f)();
-//	(examplep->*f)();
-//	return (0);
-//}
