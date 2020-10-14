@@ -27,11 +27,11 @@ void 	get_time(void)
 	time_t t = time(0);
 
 	strftime(s, MAXLEN, "%Y%m%d", localtime(&t));
-	std::cout << "[" << s << "] ";
+	std::cout << "[" << s << "_";
 	strftime(s, MAXLEN, "%T", localtime(&t));
 	str = convertToString(s, strlen(s));
 	str.erase(std::remove(str.begin(), str.end(), ':'), str.end());
-	std::cout << "[" << str << "] ";
+	std::cout << str << "] ";
 }
 
 
@@ -42,8 +42,8 @@ Account::Account(int initial_deposit) : _amount(initial_deposit){
 	this->_accountIndex = i;
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
-	std::cout << this->_amount << std::endl;
-	std::cout << this->_accountIndex << std::endl;
+	std::cout << "index:" << this->_accountIndex << ";amount:" \
+	<< this->_amount << ";created" << std::endl;
 
 	return ;
 }
