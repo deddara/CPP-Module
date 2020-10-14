@@ -7,9 +7,12 @@ void search_handler(Contact *cont, int i)
 {
 	int j = 0;
 
+	std::string str = "There are no contacts...";
+	str.resize(10);
+	str += '.';
 	if (!i)
 	{
-		std::cout << "There are no contacts..." << std::endl;
+		std::cout << str << std::endl;
 		return ;
 	}
 	std::cout << std::setw(10) << "index" << "|" << std::setw(10) << "first name" << "|" \
