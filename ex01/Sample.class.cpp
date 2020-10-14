@@ -59,8 +59,32 @@ void 	Contact::search_output(int id) const {
 		nickname.resize(9);
 		nickname += '.';
 	}
-
 	std::cout << std::setw(10) << id << "|" << std::setw(10) \
 	<< f_name << "|" << std::setw(10) << l_name  << "|"\
 	<< std::setw(10) << nickname << std::endl;
+}
+
+void	Contact::contact_output(void) const {
+	std::cout << "First name: ";
+	std::cout << this->f_name << std::endl;
+	std::cout << "Last name: ";
+	std::cout << this->l_name << std::endl;
+	std::cout << "Nickname: ";
+	std::cout << this->nickname << std::endl;
+	std::cout << "Login: ";
+	std::cout << this->login << std::endl;
+	std::cout << "Postal address: ";
+	std::cout << this->post_addr << std::endl;
+	std::cout << "Email address: ";
+	std::cout << this->email_addr << std::endl;
+	std::cout << "Phone number: ";
+	std::cout << this->ph_num << std::endl;
+	std::cout << "Birth date: ";
+	std::cout << this->bday_date << std::endl;
+	std::cout << "Favorite meal: ";
+	std::cout << this->fav_meal << std::endl;
+	std::cout << "Underwear color: ";
+	std::cout << this->undr_clr << std::endl;
+	std::cout << "Darkest secret: ";
+	std::cout << this->drkst_scrt << std::endl;
 }

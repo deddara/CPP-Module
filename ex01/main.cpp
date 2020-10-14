@@ -5,8 +5,8 @@
 
 void search_handler(Contact *cont, int i)
 {
-	int j = 0;
-
+	int			j = 0;
+	int 		id;
 	if (!i)
 	{
 		std::cout << "There are no contacts..." << std::endl;
@@ -19,6 +19,18 @@ void search_handler(Contact *cont, int i)
 		cont[j].search_output(j);
 		j++;
 	}
+	while (1) {
+		std::cout << "Enter index for contact details: ";
+		std::cin >> id;
+		if (id < 0 || id > i - 1) {
+			std::cout << "Wrong Id!" << std::endl;
+			continue;
+		}
+		else {
+			cont[id].contact_output();
+			break ;
+		}
+	}
 }
 
 
@@ -30,7 +42,7 @@ int		main(void)
 
 	while (i < 9) {
 		std::cout << "Enter command: ";
-		getline(std::cin, cmd);
+		getline(std::cin >> std::ws, cmd);
 		if (cmd.compare("EXIT") == 0)
 			return (0);
 		else if (cmd.compare("ADD") == 0)
@@ -42,8 +54,9 @@ int		main(void)
 			}
 			cont[i++].add_contact();
 		}
-		else if (cmd.compare("SEARCH") == 0)
+		else if (cmd.compare("SEARCH") == 0) {
 			search_handler(cont, i);
+		}
 		else {
 			std::cout << "No such command" << std::endl;
 			continue;

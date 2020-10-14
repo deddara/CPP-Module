@@ -6,7 +6,7 @@
 /*   By: deddara <deddara@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:30:07 by deddara           #+#    #+#             */
-/*   Updated: 2020/10/14 17:00:28 by deddara          ###   ########.fr       */
+/*   Updated: 2020/10/14 18:15:42 by deddara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ public:
 
 	void	add_contact(void);
 	void 	search_output(int id) const;
-	void 	contact_output(int id) const;
+	void 	contact_output(void) const;
 
 private:
 
