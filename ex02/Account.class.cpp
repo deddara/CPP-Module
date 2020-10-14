@@ -8,6 +8,7 @@ int Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
+int	Account::_count = 0;
 
 std::string convertToString(char* a, int size)
 {
@@ -17,6 +18,26 @@ std::string convertToString(char* a, int size)
 		s = s + a[i];
 	}
 	return s;
+}
+
+int		Account::checkAmount( void ) const{
+	++_count;
+	return (_count);
+}
+
+int Account::getNbAccounts( void ){
+//	std::cout << _nbAccounts << std::endl;
+	return (_nbAccounts);
+}
+int	Account::getTotalAmount( void ){
+	return (_totalAmount);
+}
+int	Account::getNbDeposits( void )
+{
+	return (_totalAmount);
+}
+int	Account::getNbWithdrawals( void ){
+	return (_totalNbWithdrawals);
 }
 
 void	Account::_displayTimestamp(void)
