@@ -19,7 +19,7 @@ std::string convertToString(char* a, int size)
 	return s;
 }
 
-void 	get_time(void)
+void	Account::_displayTimestamp(void)
 {
 	const int MAXLEN = 80;
 	char s[MAXLEN];
@@ -34,20 +34,48 @@ void 	get_time(void)
 	std::cout << str << "] ";
 }
 
+bool Account::makeWithdrawal(int withdrawal)
+{
+	return (1);
+}
+
+void Account::makeDeposit(int deposit)
+{
+
+}
+
+void Account::displayAccountsInfos (void)
+{
+	Account::_displayTimestamp();
+	std::cout << "accounts:" << Account::_nbAccounts << ";total:" << Account::_totalAmount \
+	<< ";deposits:" << Account::_totalNbDeposits << ";withdrawals:" << Account::_totalNbWithdrawals << std::endl;
+	return ;
+}
+
+void	Account::displayStatus( void ) const
+{
+	Acc
+}
+
 
 Account::Account(int initial_deposit) : _amount(initial_deposit){
 
 	i++;
-	get_time();
+	Account::_displayTimestamp();
+	Account::_nbAccounts++;
+	Account::_totalAmount += this->_amount;
 	this->_accountIndex = i;
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
 	std::cout << "index:" << this->_accountIndex << ";amount:" \
 	<< this->_amount << ";created" << std::endl;
-
 	return ;
 }
 
 Account::~Account(void){
+//	get_time();
+//	std::cout << "index:" << this->_accountIndex << ";amount:" \
+//	<< this->_amount << ";closed" << std::endl;
 	return ;
 }
+
