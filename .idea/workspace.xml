@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11a90b1b-eee5-4d59-8128-f1da5ec265e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ex01/Contact.class.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex01/Contact.class.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/Sample.class.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/iContact" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ex01/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/obj/Sample.class.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/obj/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +51,7 @@
       <workItem from="1602664130724" duration="811000" />
       <workItem from="1602665047111" duration="1411000" />
       <workItem from="1602676907326" duration="20932000" />
-      <workItem from="1602771884533" duration="749000" />
+      <workItem from="1602771884533" duration="2621000" />
     </task>
     <servers />
   </component>
