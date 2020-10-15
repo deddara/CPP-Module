@@ -1,29 +1,44 @@
 #include "Pony.hpp"
 #include <iostream>
 
-std::string Pony::getPonyColor() const {
-	return (_color);
+void  ponyOnTheHeap()
+{
+	Pony	*pon = new Pony("Carol", "yellow", "potatoes", 3);
+	Pony	*pon1 = new Pony("Vika", "white", "bowl", 5);
+
+	int num = pon->getNum();
+	std::cout << "Total num of ponies: " <<  num << std::endl;
+	std::cout << "Color of " << pon->getPonyName() << " is: " << pon->getPonyColor() << std::endl;
+	std::cout << "Color of " << pon1->getPonyName() << " is: " << pon1->getPonyColor() << std::endl;
+
+	delete pon;
+	delete pon1;
+	return ;
 }
 
-int  ponyOnTheStack()
+void  ponyOnTheStack()
 {
-	Pony pon("dsad", "dsaf", "dsafds", 3);
-	Pony pon2("dsad", "dsaf", "dsafds", 3);
-	int num = pon.getNum();
+	Pony pon("Lily", "brown", "Soup", 12);
+	Pony pon2("Sally", "Orange", "Carrot", 54);
 
-	std::cout << num << std::endl;
-	return (0);
+	int num = pon.getNum();
+	std::cout << "Total num of ponies: " <<  num << std::endl;
+	std::cout << "Color of " << pon.getPonyName() << " is: " << pon.getPonyColor() << std::endl;
+	std::cout << "Color of " << pon2.getPonyName() << " is: " << pon2.getPonyColor() << std::endl;
+	return ;
 }
 
 int main()
 {
 	std::string str;
 	int num;
-	Pony pon("dsad", "dsaf", "dsafds", 3);
-	str = pon.getPonyColor();
+	Pony pon("Katey", "Green", "Apple", 3);
+
 	num = pon.getNum();
-	std::cout << num << std::endl;
+	std::cout << "(main) Total num of ponies: " <<  num << std::endl;
 	ponyOnTheStack();
-	std::cout << num << std::endl;
+	std::cout << "(main) Total num of ponies: " << num << std::endl;
+	ponyOnTheHeap();
+	std::cout << "(main) Total num of ponies: " << num << std::endl;
 	return (0);
 }
