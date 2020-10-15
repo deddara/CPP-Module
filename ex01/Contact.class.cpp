@@ -1,16 +1,7 @@
 #include "Contact.class.hpp"
 #include <iostream>
 #include <iomanip>
-//Sample::Sample(void) : foo(42) {
-//
-//	return;
-//}
-//
-//Sample::~Sample(void){
-//	std::cout << "destructor called" << std::endl;
-//	return ;
-//}
-//
+
 void 	Contact::add_contact(void) {
 
 	std::cout << "Enter first name: ";

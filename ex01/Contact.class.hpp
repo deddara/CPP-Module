@@ -6,7 +6,7 @@
 /*   By: deddara <deddara@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:30:07 by deddara           #+#    #+#             */
-/*   Updated: 2020/10/14 18:15:42 by deddara          ###   ########.fr       */
+/*   Updated: 2020/10/14 18:51:05 by deddara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 # include <string>
 
 class Contact{
-
-public:
-
-	void	add_contact(void);
-	void 	search_output(int id) const;
-	void 	contact_output(void) const;
 
 private:
 
@@ -36,7 +30,11 @@ private:
 	std::string undr_clr;
 	std::string drkst_scrt;
 
+public:
 
+	void	add_contact(void);
+	void 	search_output(int id) const;
+	void 	contact_output(void) const;
 
 };
 

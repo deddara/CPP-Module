@@ -29,7 +29,7 @@ void search_input(Contact *cont, int i)
 		std::cout << "Enter index for contact details: ";
 		std::cin >> id;
 		if (is_integer(id) == 0){
-			std::cout << "not a num" << std::endl;
+			std::cout << "Not a num" << std::endl;
 			continue;
 		}
 		id_num = atoi(id.c_str());
