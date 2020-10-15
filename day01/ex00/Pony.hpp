@@ -9,6 +9,9 @@ public:
 	Pony(std::string color, std::string name, std::string favMeal, int hornLen);
 	~Pony(void);
 
+	std::string getPonyColor() const;
+//	getPonyColor() const;
+//	getPonyColor() const;
 private:
 	std::string const _color;
 	std::string const _name;
