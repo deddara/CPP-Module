@@ -6,7 +6,7 @@ class Pony {
 
 public:
 
-	Pony(std::string name, std::string color, std::string favMeal, int hornLen);
+	Pony(std::string name, std::string color, std::string favMeal);
 	~Pony(void);
 
 	static int num;
@@ -15,10 +15,9 @@ public:
 	int getNum() const;
 
 private:
-	std::string const _color;
 	std::string const _name;
+	std::string const _color;
 	std::string const _favMeal;
-	int const 			_hornLen;
 
 };
 

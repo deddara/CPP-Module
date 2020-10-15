@@ -3,8 +3,8 @@
 
 void  ponyOnTheHeap()
 {
-	Pony	*pon = new Pony("Carol", "yellow", "potatoes", 3);
-	Pony	*pon1 = new Pony("Vika", "white", "bowl", 5);
+	Pony	*pon = new Pony("Carol", "yellow", "potatoes");
+	Pony	*pon1 = new Pony("Vika", "white", "bowl");
 
 	int num = pon->getNum();
 	std::cout << "Total num of ponies: " <<  num << std::endl;
@@ -18,9 +18,8 @@ void  ponyOnTheHeap()
 
 void  ponyOnTheStack()
 {
-	Pony pon("Lily", "brown", "Soup", 12);
-	Pony pon2("Sally", "Orange", "Carrot", 54);
-
+	Pony pon("Lily", "brown", "Soup");
+	Pony pon2("Sally", "Orange", "Carrot");
 	int num = pon.getNum();
 	std::cout << "Total num of ponies: " <<  num << std::endl;
 	std::cout << "Color of " << pon.getPonyName() << " is: " << pon.getPonyColor() << std::endl;
@@ -32,7 +31,7 @@ int main()
 {
 	std::string str;
 	int num;
-	Pony pon("Katey", "Green", "Apple", 3);
+	Pony pon("Katey", "Green", "Apple");
 
 	num = pon.getNum();
 	std::cout << "(main) Total num of ponies: " <<  num << std::endl;
