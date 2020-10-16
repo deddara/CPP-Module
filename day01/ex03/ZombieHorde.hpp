@@ -2,6 +2,8 @@
 # define ZOMBIE_HORDE_H
 # include "Zombie.hpp"
 
+
+
 class ZombieHorde{
 
 public:
@@ -10,8 +12,11 @@ public:
 	void announce(void)const;
 
 private:
+
 	Zombie *_zombies;
 	int const	_num;
+
+
 
 };
 

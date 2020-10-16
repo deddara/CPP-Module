@@ -15,6 +15,7 @@ Zombie::Zombie(void)
 {
 	_name = names[std::rand() % (sizeof(names) / sizeof(names[0]))];
 	_type = types[std::rand() % (sizeof(types) / sizeof(types[0]))];
+
 	return ;
 }
 
