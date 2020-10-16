@@ -16,8 +16,4 @@ public:
 	~Zombie(void);
 };
 
-class ZombieEvent{
-
-};
-
 #endif
