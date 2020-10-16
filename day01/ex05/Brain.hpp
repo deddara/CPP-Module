@@ -6,7 +6,9 @@ class Brain{
 
 public:
 
-	std::string identify();
+	std::string identify() const;
+	Brain();
+	~Brain();
 
 private:
 	int			_size;
