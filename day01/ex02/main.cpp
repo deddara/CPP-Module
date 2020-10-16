@@ -10,8 +10,7 @@ void randomChump()
 {
 	int index;
 
-	srand((unsigned) time(0));
-	index =  (rand() % (sizeof(names) / sizeof(names[0])));
+	index =  (std::rand() % (sizeof(names) / sizeof(names[0])));
 
 	Zombie zomb(names[index], "Chump");
 	zomb.announce();
@@ -19,6 +18,8 @@ void randomChump()
 
 int main()
 {
+	std::srand(std::time(0));
+
 	Zombie		stackZomb("Joji", "stack");
 	Zombie		*heapZomb;
 	ZombieEvent	eventer;
@@ -32,5 +33,5 @@ int main()
 
 	randomChump();
 
-	return 1;
+	return 0;
 }

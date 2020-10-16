@@ -6,8 +6,10 @@
 
 int main()
 {
-	ZombieHorde zz(12);
+	std::srand(std::time(0));
 
+	ZombieHorde zz(12);
 	zz.announce();
+
 	return 0;
 }
