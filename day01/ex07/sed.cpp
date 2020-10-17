@@ -28,9 +28,13 @@ int main (int argc, char **argv)
 	std::string			file_data;
 	std::stringstream	buffer;
 	std::ifstream		ifs(argv[1]);
+	char		 		*valid = NULL;
 
 	if (!ifs.is_open())
 		return (error("Wrong file"));
+	if (!(valid = strstr(argv[1], ".replace")) || strlen(valid) != 8)
+		return (error("Not .replace format"));
+
 	buffer << ifs.rdbuf(); //reading whole file
 	file_data = buffer.str();	//converting to string
 	file_data = my_sed(file_data, argv[2], argv[3]);
