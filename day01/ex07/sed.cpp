@@ -8,13 +8,16 @@ int 	error(std::string str) {
 	return (1);
 }
 
-std::string ReplaceAll(std::string str, const std::string& from, const std::string& to) {
-	size_t start_pos = 0;
-	while((start_pos = str.find(from, start_pos)) != std::string::npos) {
-		str.replace(start_pos, from.length(), to);
-		start_pos += to.length(); // Handles case where 'to' is a substring of 'from'
+std::string my_sed(std::string str, const std::string where, const std::string what) {
+
+	int start_pos = 0;
+
+	while((start_pos = str.find(where, start_pos)) != std::string::npos)
+	{
+		str.replace(start_pos, where.length(), what);
+		start_pos += what.length();
 	}
-	return str;
+	return (str);
 }
 
 int main (int argc, char **argv)
@@ -30,7 +33,9 @@ int main (int argc, char **argv)
 		return (error("Wrong file"));
 	buffer << ifs.rdbuf(); //reading whole file
 	file_data = buffer.str();	//converting to string
-	file_data = ReplaceAll(file_data, argv[2], argv[3]);
-	std::cout << file_data << std::endl;
+	file_data = my_sed(file_data, argv[2], argv[3]);
+
+	std::ofstream 		ofs(argv[1], std::ios_base::out | std::ios_base::trunc);
+	ofs << file_data;
 	return (0);
 }
