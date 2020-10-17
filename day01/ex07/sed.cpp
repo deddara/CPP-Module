@@ -10,7 +10,7 @@ int 	error(std::string str) {
 
 std::string my_sed(std::string str, const std::string where, const std::string what) {
 
-	int start_pos = 0;
+	size_t start_pos = 0;
 
 	while((start_pos = str.find(where, start_pos)) != std::string::npos)
 	{
