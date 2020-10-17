@@ -12,9 +12,12 @@ public:
 
 private:
 	int			_size;
-	std::string	_color;
 	int 		_nrns_num;
 	int 		_old;
+	std::string	_color;
+
+
+
 };
 
 #endif

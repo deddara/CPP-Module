@@ -15,6 +15,9 @@ std::string Brain::identify() const{
 
 Brain::Brain() : _size(10), _nrns_num (20), _old (13) , _color("blue")
 {
+	(void)_size;
+	(void)_nrns_num;
+	(void)_old;
 	return;
 }
 
