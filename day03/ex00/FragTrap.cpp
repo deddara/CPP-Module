@@ -7,9 +7,11 @@ const std::string attacks[5] = {
 
 const int attacks_dmg[5] = {100, 5, 3, 99999, 50};
 
-FragTrap::FragTrap( std::string name ) : _name(name), _hp(100), _max_hp(100), _ep(100), \
-_max_ep(100), _lvl(1), _ml_dmg(30), _rng_dmg(20), _armor_red(5)
+FragTrap::FragTrap( std::string name ) : _hp(100), _max_hp(100), _ep(100), \
+_max_ep(100),  _lvl(1), _name(name), _ml_dmg(30), _rng_dmg(20), _armor_red(5)
 {
+	(void)_max_ep;
+	(void)_lvl;
 	std::cout << "Alaka-ZAM! My name is " << name << "!" << std::endl;
 }
 
@@ -61,8 +63,8 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	else {
 		this->_ep -= 25;
 		this->rand_index = (std::rand() % (sizeof(attacks) / sizeof(attacks[0])));
-		std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << attacks[index] << " causing " \
-		<< attacks_dmg[index] << " points of damage!" << std::endl;
+		std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << attacks[this->rand_index] << " causing " \
+		<< attacks_dmg[this->rand_index] << " points of damage!" << std::endl;
 	}
 }
 
