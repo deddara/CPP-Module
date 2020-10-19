@@ -33,3 +33,13 @@ void FragTrap::takeDamage(unsigned int amount) {
 	std::cout << this->_name << " got attacked with " << start_amount << " damage power! Shield reduced atatck on " \
 	<< start_amount - amount << "! Current hp: " << this->_hp << std::endl;
 }
+
+void FragTrap::beRepaired(unsigned int amount) {
+	int prev_hp = this->_hp;
+
+	if (amount > this->_max_hp)
+		this->_hp = this->_max_hp;
+	else
+		this->_hp += amount;
+	std::cout << this->_name << " got healed by " << this->_hp - prev_hp << " health points! Now his health is: " << this->_hp << std::endl;
+}

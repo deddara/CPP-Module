@@ -5,15 +5,15 @@
 class FragTrap{
 
 private:
-	int			_hp;
-	int 		_max_hp;
-	int 		_ep;
-	int 		_max_ep;
-	int 		_lvl;
-	std::string	_name;
-	int 		_ml_dmg;
-	int 		_rng_dmg;
-	int 		_armor_red;
+	unsigned int		_hp;
+	unsigned int 		_max_hp;
+	unsigned int 		_ep;
+	unsigned int 		_max_ep;
+	unsigned int 		_lvl;
+	std::string			_name;
+	unsigned int 		_ml_dmg;
+	unsigned int		_rng_dmg;
+	unsigned int 		_armor_red;
 
 public:
 	FragTrap( std::string name );
@@ -21,8 +21,8 @@ public:
 	void rangedAttack( std::string const & target );
 	void meleeAttack( std::string const & target );
 	void takeDamage( unsigned int amount );
-//	void beRepaired( unsigned int amount );
-
+	void beRepaired( unsigned int amount );
+	void vaulthunter_dot_exe(std::string const & target);
 };
 
 
