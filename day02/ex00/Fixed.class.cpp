@@ -1,5 +1,10 @@
 #include "Fixed.class.hpp"
 
+fNum	&fNum::operator=(const fNum &sec_arg) {
+	this->f_val = sec_arg.getRawBits();
+	return *this;
+}
+
 void fNum::setRawBits(const int raw) {
 	this->f_val = raw;
 }

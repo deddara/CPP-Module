@@ -13,6 +13,7 @@ public:
 	~fNum();
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
+	fNum & operator=(fNum const & sec_arg);
 
 };
 
