@@ -10,6 +10,6 @@ int main()
 	FragTrap robo3("Anton");
 
 	robo1.meleeAttack("Boba");
-	robo2.takeDamage(robo1.getMelee);
+	robo2.takeDamage(robo1.getMelee());
 	return (0);
 }

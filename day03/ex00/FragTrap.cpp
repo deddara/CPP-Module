@@ -64,5 +64,15 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 		std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << attacks[index] << " causing " \
 		<< attacks_dmg[index] << " points of damage!" << std::endl;
 	}
+}
 
+unsigned int FragTrap::getMelee(void) {
+	return (this->_ml_dmg);
+}
+
+unsigned int FragTrap::getRange(void) {
+	return (this->_rng_dmg);
+}
+unsigned int FragTrap::getRand(void) {
+	return (attacks_dmg[rand_index]);
 }
