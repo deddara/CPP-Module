@@ -60,7 +60,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	}
 	else {
 		this->_ep -= 25;
-		int index = (std::rand() % (sizeof(attacks) / sizeof(attacks[0])));
+		this->rand_index = (std::rand() % (sizeof(attacks) / sizeof(attacks[0])));
 		std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << attacks[index] << " causing " \
 		<< attacks_dmg[index] << " points of damage!" << std::endl;
 	}

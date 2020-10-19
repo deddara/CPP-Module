@@ -14,6 +14,7 @@ private:
 	unsigned int 		_ml_dmg;
 	unsigned int		_rng_dmg;
 	unsigned int 		_armor_red;
+	int 				rand_index;
 
 public:
 	FragTrap( std::string name );
@@ -23,6 +24,10 @@ public:
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
 	void vaulthunter_dot_exe(std::string const & target);
+
+	unsigned int getMelee(void);
+	unsigned int getRange(void);
+	unsigned int getRand(void);
 };
 
 
