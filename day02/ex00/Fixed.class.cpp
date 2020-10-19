@@ -1,22 +1,34 @@
 #include "Fixed.class.hpp"
+#include <iostream>
 
-fNum	&fNum::operator=(const fNum &sec_arg) {
+const int Fixed::fr_bits = 0;
+
+Fixed	&Fixed::operator=(const Fixed &sec_arg) {
+	std::cout << "Assignation operator called" << std::endl;
 	this->f_val = sec_arg.getRawBits();
 	return *this;
 }
 
-void fNum::setRawBits(const int raw) {
+void Fixed::setRawBits(const int raw) {
 	this->f_val = raw;
 }
 
-int fNum::getRawBits() const {
+int Fixed::getRawBits() const {
+	std::cout << "getRawBits member function called" << std::endl;
 	return (this->f_val);
 }
 
-fNum::fNum(fNum const & cpy) {
+Fixed::Fixed(Fixed const & cpy) {
+	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
-fNum::fNum( void ) : f_val(0) { return ;}
+Fixed::Fixed( void ) : f_val(0) {
+	std::cout << "Default constructor called" << std::endl;
+	return ;
+}
 
-fNum::~fNum( void ) { return ;}
+Fixed::~Fixed( void ) {
+	std::cout << "Destructor called" << std::endl;
+	return ;
+}

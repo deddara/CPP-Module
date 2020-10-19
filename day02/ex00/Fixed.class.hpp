@@ -1,19 +1,19 @@
 #ifndef FIXED_CLASS_H
 # define FIXED_CLASS_H
 
-class fNum{
+class Fixed{
 
 private:
 	int 	f_val;
-	static const fr_bits;
+	static const int fr_bits;
 
 public:
-	fNum();
-	fNum(fNum const &cpy);
-	~fNum();
+	Fixed();
+	Fixed(Fixed const &cpy);
+	~Fixed();
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
-	fNum & operator=(fNum const & sec_arg);
+	Fixed & operator=(Fixed const & sec_arg);
 
 };
 
