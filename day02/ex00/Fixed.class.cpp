@@ -1,7 +1,7 @@
 #include "Fixed.class.hpp"
 #include <iostream>
 
-const int Fixed::fr_bits = 0;
+const int Fixed::fr_bits = 8;
 
 Fixed	&Fixed::operator=(const Fixed &sec_arg) {
 	std::cout << "Assignation operator called" << std::endl;
