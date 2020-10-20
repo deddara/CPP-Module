@@ -1,6 +1,9 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
+const std::string challenges[5] = {"Make for SC4V-TP a coffee", "Code in C again", "Take a dance",
+								   "Sing a lovely song", "If you will meet Putin, what will you say?"};
+
 ScavTrap::ScavTrap( std::string name ) : _hp(100), _max_hp(100), _ep(50), \
 _max_ep(50),  _lvl(1), _name(name), _ml_dmg(20), _rng_dmg(15), _armor_red(3)
 {
@@ -47,4 +50,16 @@ void ScavTrap::beRepaired(unsigned int amount) {
 		this->_hp += amount;
 	std::cout << "*I found health!* SC4V-TP " << this->_name << " got healed by " << this->_hp - prev_hp \
 	<< " health points! Now his health is: " << this->_hp << std::endl;
+}
+
+void ScavTrap::challengeNewcomer(void) {
+	if (this->_ep < 25)
+	{
+		std::cout << "NOT ENOUGH MANA" << std::endl;
+	}
+	else {
+		this->_ep -= 25;
+		this->rand_index = (std::rand() % (sizeof(challenges) / sizeof(challenges[0])));
+		std::cout<< "SC4V-TP " << this->_name << " challenged you! You have to: " << challenges[this->rand_index] << std::endl;
+	}
 }
