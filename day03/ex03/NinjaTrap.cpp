@@ -18,6 +18,24 @@ void NinjaTrap::ninjaShoebox(FragTrap &frg_trp) {
 	frg_trp.takeDamage(this->getRandActDmg());
 }
 
+void NinjaTrap::ninjaShoebox(ClapTrap &clp_trp) {
+	_rand_index = (std::rand() % (sizeof(act) / sizeof(act[0])));
+	std::cout << "<" << _type << "> *Hyaaa* " << _name << " attacked " << clp_trp.getName() << " with " << act[_rand_index] << "!" << std::endl;
+	clp_trp.takeDamage(this->getRandActDmg());
+}
+
+void NinjaTrap::ninjaShoebox(ScavTrap &scv_trp) {
+	_rand_index = (std::rand() % (sizeof(act) / sizeof(act[0])));
+	std::cout << "<" << _type << "> *Hyaaa* " << _name << " attacked " << scv_trp.getName() << " with " << act[_rand_index] << "!" << std::endl;
+	scv_trp.takeDamage(this->getRandActDmg());
+}
+
+void NinjaTrap::ninjaShoebox(NinjaTrap &ninja_trp) {
+	_rand_index = (std::rand() % (sizeof(act) / sizeof(act[0])));
+	std::cout << "<" << _type << "> *Hyaaa* " << _name << " attacked " << ninja_trp.getName() << " with " << act[_rand_index] << "!" << std::endl;
+	ninja_trp.takeDamage(this->getRandActDmg());
+}
+
 unsigned int NinjaTrap::getRandActDmg(void) {
 	return (act_dmg[_rand_index]);
 }
