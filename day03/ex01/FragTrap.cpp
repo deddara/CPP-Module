@@ -78,3 +78,7 @@ unsigned int FragTrap::getRange(void) {
 unsigned int FragTrap::getRand(void) {
 	return (attacks_dmg[rand_index]);
 }
+
+std::string FragTrap::getName(){
+	return(this->_name);
+}

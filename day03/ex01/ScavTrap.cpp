@@ -63,3 +63,15 @@ void ScavTrap::challengeNewcomer(void) {
 		std::cout<< "SC4V-TP " << this->_name << " challenged you! You have to: " << challenges[this->rand_index] << std::endl;
 	}
 }
+
+unsigned int ScavTrap::getMelee(void) {
+	return (this->_ml_dmg);
+}
+
+unsigned int ScavTrap::getRange(void) {
+	return (this->_rng_dmg);
+}
+
+std::string ScavTrap::getName(){
+	return(this->_name);
+}

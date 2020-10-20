@@ -27,7 +27,7 @@ public:
 
 	unsigned int getMelee(void);
 	unsigned int getRange(void);
-	unsigned int getRand(void);
+	std::string	getName(void);
 };
 
 #endif
