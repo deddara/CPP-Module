@@ -59,3 +59,7 @@ unsigned int ClapTrap::getRange(void) {
 std::string ClapTrap::getName(){
 	return(this->_name);
 }
+
+unsigned int ClapTrap::getRand(void) {
+	return (attacks_dmg[_rand_index]);
+}
