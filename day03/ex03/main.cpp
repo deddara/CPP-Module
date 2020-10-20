@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
+#include "NinjaTrap.hpp"
 #include <iostream>
 
 void out_of_energy_test (FragTrap & robo3)
@@ -48,10 +49,13 @@ int main()
 {
 	std::srand(std::time(0));
 
-	fragtrapTest();
+//	fragtrapTest();
 	std::cout << "----------------------------------------------------------" << std::endl;
-	scavtrapTest();
+//	scavtrapTest();
+	NinjaTrap ninja("ninja");
+	FragTrap frag("frogo");
 
+	ninja.ninjaShoebox(frag);
 	return (0);
 }
 

@@ -28,3 +28,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 		<< attacks_dmg[this->_rand_index] << " points of damage!" << std::endl;
 	}
 }
+
+unsigned int FragTrap::getRand(void) {
+	return (attacks_dmg[_rand_index]);
+}

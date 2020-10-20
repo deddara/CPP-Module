@@ -20,7 +20,7 @@ public:
 	void ninjaShoebox( ScavTrap & scv_trp);
 	void ninjaShoebox( FragTrap & frg_trp);
 	void ninjaShoebox( NinjaTrap & ninja_trp);
-
+	unsigned int getRandActDmg(void);
 };
 
 #endif

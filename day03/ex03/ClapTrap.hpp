@@ -30,7 +30,6 @@ public:
 	unsigned int getMelee(void);
 	unsigned int getRange(void);
 	std::string		getName(void);
-	unsigned int getRand(void);
 
 
 };
