@@ -45,17 +45,29 @@ void scavtrapTest()
 	hunter.challengeNewcomer();
 }
 
+void NinjaTrapTest()
+{
+	NinjaTrap	ninja("Saruko");
+	NinjaTrap	ninja2("Yoshi");
+	ScavTrap	simple_scav("Simpler");
+	FragTrap	simple_trap("Trapper");
+	ClapTrap	simple_clap("Clapper");
+
+	ninja.ninjaShoebox(simple_clap);
+	ninja.ninjaShoebox(ninja2);
+	ninja.ninjaShoebox(simple_trap);
+	ninja.ninjaShoebox(simple_scav);
+}
+
 int main()
 {
 	std::srand(std::time(0));
 
-//	fragtrapTest();
+	fragtrapTest();
 	std::cout << "----------------------------------------------------------" << std::endl;
-//	scavtrapTest();
-	NinjaTrap ninja("ninja");
-	FragTrap frag("frogo");
-
-	ninja.ninjaShoebox(frag);
+	scavtrapTest();
+	std::cout << "----------------------------------------------------------" << std::endl;
+	NinjaTrapTest();
 	return (0);
 }
 
