@@ -1,5 +1,6 @@
 #ifndef SCAVTRAP_H
 # define SCAVTRAP_H
+# include <string>
 
 class ScavTrap{
 
