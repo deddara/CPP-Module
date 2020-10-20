@@ -26,23 +26,23 @@ void fragtrapTest()
 	robo3.vaulthunter_dot_exe(robo1.getName());
 	robo1.takeDamage(robo3.getRand());
 
-//	out_of_energy_test(robo3);
+	out_of_energy_test(robo3);
 }
 
-//void scavtrapTest()
-//{
-//	ScavTrap hunter("Hunter");
-//	ScavTrap warlock("Warlock");
-//	ScavTrap andrei("Andrei");
-//
-//	hunter.meleeAttack(warlock.getName());
-//	warlock.takeDamage(hunter.getMelee());
-//
-//	warlock.rangedAttack(andrei.getName());
-//	andrei.takeDamage(warlock.getRange());
-//
-//	hunter.challengeNewcomer();
-//}
+void scavtrapTest()
+{
+	ScavTrap hunter("Hunter");
+	ScavTrap warlock("Warlock");
+	ScavTrap andrei("Andrei");
+
+	hunter.meleeAttack(warlock.getName());
+	warlock.takeDamage(hunter.getMelee());
+
+	warlock.rangedAttack(andrei.getName());
+	andrei.takeDamage(warlock.getRange());
+
+	hunter.challengeNewcomer();
+}
 
 int main()
 {
@@ -50,7 +50,7 @@ int main()
 
 	fragtrapTest();
 	std::cout << "----------------------------------------------------------" << std::endl;
-//	scavtrapTest();
+	scavtrapTest();
 
 	return (0);
 }
