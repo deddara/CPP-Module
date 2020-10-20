@@ -10,6 +10,8 @@ class SuperTrap : public FragTrap, public NinjaTrap{
 public:
 	SuperTrap( std::string name );
 	~SuperTrap();
+	using NinjaTrap::meleeAttack;
+	using FragTrap::rangedAttack;
 
 };
 
