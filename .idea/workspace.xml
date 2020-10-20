@@ -11,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="11a90b1b-eee5-4d59-8128-f1da5ec265e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/ex04/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/day03/ex04/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/ex04/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day03/ex04/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +65,8 @@
       <workItem from="1602850763869" duration="8267000" />
       <workItem from="1602928308565" duration="4342000" />
       <workItem from="1602939014194" duration="2163000" />
-      <workItem from="1603119495041" duration="3653000" />
+      <workItem from="1603119495041" duration="9733000" />
+      <workItem from="1603179282062" duration="14554000" />
     </task>
     <servers />
   </component>
@@ -72,9 +82,14 @@
       <screen x="0" y="23" width="2560" height="1328" />
     </state>
     <state x="512" y="473" width="1233" height="722" key="SettingsEditor/0.23.2560.1328@0.23.2560.1328" timestamp="1602672732084" />
-    <state x="945" y="326" width="670" height="676" key="search.everywhere.popup" timestamp="1602784477885">
+    <state x="945" y="345" key="run.anything.popup" timestamp="1603201646388">
       <screen x="0" y="23" width="2560" height="1328" />
     </state>
+    <state x="945" y="345" key="run.anything.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1603201646388" />
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup" timestamp="1603191031686">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603191031686" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1602784477885" />
   </component>
 </project>
