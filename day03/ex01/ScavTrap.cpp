@@ -12,7 +12,7 @@ _max_ep(50),  _lvl(1), _name(name), _ml_dmg(20), _rng_dmg(15), _armor_red(3)
 	std::cout << "RUN FOR YOUR LIIIIIVES!!! SC4V-TP " << name << " is here!" << std::endl;
 }
 
-ScavTrap::~ScavTrap( void ) {std::cout << "Crap happens." \
+ScavTrap::~ScavTrap( void ) {std::cout << "Crap happens. " \
 << this->_name << " faced death." << std::endl;}
 
 void ScavTrap::rangedAttack(const std::string &target) {
