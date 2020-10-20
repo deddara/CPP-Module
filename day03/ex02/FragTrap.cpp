@@ -10,10 +10,10 @@ const int FragTrap::attacks_dmg[5] = {100, 5, 3, 99999, 50};
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name, 100, 100, 100, 100, 1, 30, 20, 5, "FR4G-TP")
 {
-	std::cout << "Alaka-ZAM! My name is " << _name << "!" << std::endl;
+	std::cout << "<" <<  this->_type << "> " <<  "Alaka-ZAM! My name is " << _name << "!" << std::endl;
 }
 
-FragTrap::~FragTrap( void ) {std::cout << "Argh arghargh death gurgle gurglegurgle urgh... " \
+FragTrap::~FragTrap( void ) {std::cout << "<" <<  this->_type << "> " <<  "Argh arghargh death gurgle gurglegurgle urgh... " \
 << this->_name << " faced death." << std::endl;}
 
 void FragTrap::vaulthunter_dot_exe(const std::string &target) {
@@ -24,7 +24,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	else {
 		this->_ep -= 25;
 		this->_rand_index = (std::rand() % (sizeof(attacks) / sizeof(attacks[0])));
-		std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << attacks[this->_rand_index] << " causing " \
+		std::cout << "<" <<  this->_type << "> " <<  this->_name << " attacks " << target << " with " << attacks[this->_rand_index] << " causing " \
 		<< attacks_dmg[this->_rand_index] << " points of damage!" << std::endl;
 	}
 }

@@ -18,6 +18,7 @@ protected:
 	int 				_rand_index;
 	std::string			_type;
 public:
+	ClapTrap(std::string);
 	ClapTrap(std::string name, unsigned int hp, unsigned int max_hp, unsigned int ep, \
 	unsigned int max_ep, unsigned int lvl, unsigned int ml_dmg, unsigned int rng_dmg, \
 	unsigned int armor_red, std::string type);

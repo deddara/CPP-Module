@@ -7,10 +7,10 @@ const std::string ScavTrap::challenges[5] = {"Make for SC4V-TP a coffee", "Code 
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name, 100, 100, 50, 50, 1, 20, 15, 3, "SC4V-TP")
 {
-	std::cout << "RUN FOR YOUR LIIIIIVES!!! SC4V-TP " << _name << " is here!" << std::endl;
+	std::cout << "<" <<  this->_type << "> " <<  "RUN FOR YOUR LIIIIIVES!!!" << _name << " is here!" << std::endl;
 }
 
-ScavTrap::~ScavTrap( void ) {std::cout << "Crap happens. " \
+ScavTrap::~ScavTrap( void ) {std::cout << "<" <<  this->_type << "> " <<  "Crap happens. " \
 << this->_name << " faced death." << std::endl;}
 
 void ScavTrap::challengeNewcomer(void) {
@@ -21,6 +21,6 @@ void ScavTrap::challengeNewcomer(void) {
 	else {
 		this->_ep -= 25;
 		this->_rand_index = (std::rand() % (sizeof(challenges) / sizeof(challenges[0])));
-		std::cout<< "SC4V-TP " << this->_name << " challenged you! You have to: " << challenges[this->_rand_index] << std::endl;
+		std::cout<< "<" <<  this->_type << "> " << this->_name << " challenged you! You have to: " << challenges[this->_rand_index] << std::endl;
 	}
 }
