@@ -58,7 +58,7 @@ void FragTrap::beRepaired(unsigned int amount) {
 void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	if (this->_ep < 25)
 	{
-		std::cout << "Shit... don't have any energy man..." << std::endl;
+		std::cout << "*" << this->_name << "* " << "Shit... don't have any energy man..." << std::endl;
 	}
 	else {
 		this->_ep -= 25;

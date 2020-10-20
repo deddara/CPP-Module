@@ -55,7 +55,7 @@ void ScavTrap::beRepaired(unsigned int amount) {
 void ScavTrap::challengeNewcomer(void) {
 	if (this->_ep < 25)
 	{
-		std::cout << "NOT ENOUGH MANA" << std::endl;
+		std::cout << "*" << this->_name << "* " << "NOT ENOUGH MANA!" << std::endl;
 	}
 	else {
 		this->_ep -= 25;

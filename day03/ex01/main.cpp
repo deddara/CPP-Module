@@ -51,6 +51,5 @@ int main()
 	std::cout << "----------------------------------------------------------" << std::endl;
 	scavtrapTest();
 
-//	out_of_energy_test(robo3);
 	return (0);
 }
