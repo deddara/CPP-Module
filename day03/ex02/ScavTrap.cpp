@@ -2,7 +2,7 @@
 #include <iostream>
 
 const std::string ScavTrap::challenges[5] = {"Make for SC4V-TP a coffee", "Code in C again", "Take a dance",
-								   "Sing a lovely song", "If you will meet Putin, what will you say?"};
+											 "Sing a lovely song", "If you will meet Putin, what will you say?"};
 
 ScavTrap::ScavTrap( std::string name ) : _hp(100), _max_hp(100), _ep(50), \
 _max_ep(50),  _lvl(1), _name(name), _ml_dmg(20), _rng_dmg(15), _armor_red(3)

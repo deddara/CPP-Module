@@ -1,11 +1,11 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-const std::string attacks[5] = {
+const std::string FragTrap::attacks[5] = {
 		"Fire Element", "vegetable juice", "Shock Element", "ice cream", "shield"
 };
 
-const int attacks_dmg[5] = {100, 5, 3, 99999, 50};
+const int FragTrap::attacks_dmg[5] = {100, 5, 3, 99999, 50};
 
 FragTrap::FragTrap( std::string name ) : _hp(100), _max_hp(100), _ep(100), \
 _max_ep(100),  _lvl(1), _name(name), _ml_dmg(30), _rng_dmg(20), _armor_red(5)

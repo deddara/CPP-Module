@@ -15,6 +15,8 @@ private:
 	unsigned int		_rng_dmg;
 	unsigned int 		_armor_red;
 	int 				rand_index;
+	static const std::string	attacks[];
+	static const int 			attacks_dmg[];
 
 public:
 	FragTrap( std::string name );
