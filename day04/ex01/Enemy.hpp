@@ -6,9 +6,6 @@
 class Enemy{
 
 private:
-	Enemy();
-
-protected:
 	int			_hp;
 	std::string _type;
 

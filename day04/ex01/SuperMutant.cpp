@@ -10,8 +10,5 @@ SuperMutant::~SuperMutant() {
 }
 
 void SuperMutant::takeDamage(int dmg) {
-	if (dmg < 0)
-		return ;
-	else
-		_hp = (_hp - dmg) + 3;
+	Enemy::takeDamage(dmg - 3);
 }
