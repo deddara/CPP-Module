@@ -2,7 +2,7 @@
 # define POWERFIST_H
 # include "AWeapon.hpp"
 
-class PowerFist{
+class PowerFist : public AWeapon{
 
 public:
 	PowerFist();

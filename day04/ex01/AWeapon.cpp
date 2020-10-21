@@ -8,7 +8,7 @@ AWeapon::AWeapon(const AWeapon &cpy) {
 
 AWeapon::~AWeapon() { return; }
 
-std::string AWeapon::getName() const {
+std::string const &AWeapon::getName() const {
 	return (_name);
 }
 
@@ -24,4 +24,5 @@ AWeapon &AWeapon::operator=(const AWeapon &wp) {
 	_name = wp.getName();
 	_damage = wp.getDamage();
 	_apcost = wp.getAPCost();
+	return (*this);
 }
