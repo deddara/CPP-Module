@@ -19,3 +19,9 @@ int 		AWeapon::getAPCost() const {
 int			AWeapon::getDamage() const {
 	return (_damage);
 }
+
+AWeapon &AWeapon::operator=(const AWeapon &wp) {
+	_name = wp.getName();
+	_damage = wp.getDamage();
+	_apcost = wp.getAPCost();
+}
