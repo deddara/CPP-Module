@@ -26,9 +26,10 @@ void Character::recoverAP() {
 }
 
 void Character::attack(Enemy *target) {
-	if (_wpn != 0)
+	if (_wpn != 0 && _ap >= _wpn->getAPCost())
 	{
 		std::cout << _name << " attacks " << target->getType() << " with a " << _wpn->getName() << std::endl;
+		_wpn->attack();
 		target->takeDamage(_wpn->getDamage());
 		_ap -= _wpn->getAPCost();
 		if (target->getHP() <= 0)
