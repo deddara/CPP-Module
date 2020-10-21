@@ -21,11 +21,11 @@ public:
 	void attack(Enemy*);
 	std::string const & getName() const;
 	int 				getAp() const;
-	AWeapon		const &getAWeapon() const;
+	AWeapon		*getAWeapon() const;
 
-	Character &operator=(Character &);
+	Character &operator=(Character const &);
 };
 
-std::ostream &operator<<(std::ostream &o, Character const &);
+std::ostream & operator<<(std::ostream &o, Character const &);
 
 #endif

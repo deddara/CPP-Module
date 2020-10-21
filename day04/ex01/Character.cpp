@@ -15,8 +15,8 @@ std::string const & Character::getName() const {
 
 int			Character::getAp() const { return _ap;}
 
-AWeapon		const & Character::getAWeapon() const {
-	return (*_wpn);
+AWeapon		*Character::getAWeapon() const {
+	return (_wpn);
 }
 
 void Character::recoverAP() {
@@ -27,33 +27,32 @@ void Character::recoverAP() {
 
 void Character::attack(Enemy *target) {
 	if (_wpn != 0)
+	{
 		std::cout << _name << " attacks " << target->getType() << " with a " << _wpn->getName() << std::endl;
 		target->takeDamage(_wpn->getDamage());
 		_ap -= _wpn->getAPCost();
 		if (target->getHP() <= 0)
 			delete target;
 	}
-	else {
-		return;
-	}
 }
 
-Character & Character::operator=(Character &sec_arg) {
+Character & Character::operator=(Character const &sec_arg) {
 	_name = sec_arg.getName();
 	_wpn = sec_arg.getAWeapon();
 	_ap = getAp();
+	return (*this);
 }
 
 void Character::equip(AWeapon *wpn) {
 	_wpn = wpn;
 }
 
-std::ostream Character::operator<<(std::ostream &o, Character const & sev_arg)
+std::ostream & operator<<(std::ostream &o, Character const & sev_arg)
 {
-	if (_wpn != 0) {
-		o << _name << " has " << _ap << " and wields a " << _wpn->getName() << std::endl;
+	if (sev_arg.getAWeapon() != 0) {
+		o << sev_arg.getName() << " has " << sev_arg.getAp() << " and wields a " << sev_arg.getAWeapon()->getName() << std::endl;
 	}
-	else {
-		o << _name << " has " << _ap << " and is unarmed" << std::endl;
-	}
+	else
+		o << sev_arg.getName() << " has " << sev_arg.getAp() << " and is unarmed" << std::endl;
+	return (o);
 }
