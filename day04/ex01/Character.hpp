@@ -1,5 +1,6 @@
 #ifndef CHARACTER_H
 # define CHARACTER_H
+# include <ostream>
 # include <string>
 # include "AWeapon.hpp"
 # include "Enemy.hpp"
@@ -19,6 +20,12 @@ public:
 	void equip(AWeapon*);
 	void attack(Enemy*);
 	std::string const & getName() const;
+	int 				getAp() const;
+	AWeapon		const &getAWeapon() const;
+
+	Character &operator=(Character &);
 };
+
+std::ostream &operator<<(std::ostream &o, Character const &);
 
 #endif
