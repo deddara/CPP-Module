@@ -7,7 +7,7 @@ int main()
 //	Peon joe("Joe");
 	std::cout << robert;
 //	<< jim << joe;
-//	robert.polymorph(jim);
+	robert.polymorph(jim);
 //	robert.polymorph(joe);
 	return 0;
 }

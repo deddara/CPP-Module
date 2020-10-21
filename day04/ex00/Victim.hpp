@@ -4,7 +4,7 @@
 
 class Victim{
 
-private:
+protected:
 	std::string _name;
 
 public:
@@ -14,8 +14,8 @@ public:
 	Victim & operator=(const Victim &);
 	void introduce() const;
 
-	std::string getName()const;
-	void 		getPolymorphed() const;
+	std::string		getName()const;
+	virtual void	getPolymorphed() const;
 };
 
 std::ostream &operator<<(std::ostream &o, const Victim &);
