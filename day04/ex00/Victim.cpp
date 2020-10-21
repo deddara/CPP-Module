@@ -19,3 +19,13 @@ Victim &Victim::operator=(const Victim &sec_arg) {
 	this->_name = sec_arg.getName();
 	return *this;
 }
+
+void Victim::introduce() const {
+	std::cout << "I'm " << _name << " and I like otters!" << std::endl;
+}
+
+std::ostream &operator<<(std::ostream &o, Victim const &vic)
+{
+	o << "I'm " << vic.getName() << " and I like otters!" << std::endl;
+	return (o);
+}
