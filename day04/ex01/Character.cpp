@@ -51,9 +51,9 @@ void Character::equip(AWeapon *wpn) {
 std::ostream & operator<<(std::ostream &o, Character const & sev_arg)
 {
 	if (sev_arg.getAWeapon() != 0) {
-		o << sev_arg.getName() << " has " << sev_arg.getAp() << " and wields a " << sev_arg.getAWeapon()->getName() << std::endl;
+		o << sev_arg.getName() << " has " << sev_arg.getAp() << " AP and wields a " << sev_arg.getAWeapon()->getName() << std::endl;
 	}
 	else
-		o << sev_arg.getName() << " has " << sev_arg.getAp() << " and is unarmed" << std::endl;
+		o << sev_arg.getName() << " has " << sev_arg.getAp() << " AP and is unarmed" << std::endl;
 	return (o);
 }
