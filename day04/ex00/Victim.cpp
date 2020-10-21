@@ -24,6 +24,10 @@ void Victim::introduce() const {
 	std::cout << "I'm " << _name << " and I like otters!" << std::endl;
 }
 
+void Victim::getPolymorphed() const {
+	std::cout << _name << "has been turned into a cute little sheep!" << std::endl;
+}
+
 std::ostream &operator<<(std::ostream &o, Victim const &vic)
 {
 	o << "I'm " << vic.getName() << " and I like otters!" << std::endl;

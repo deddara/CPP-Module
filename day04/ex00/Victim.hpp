@@ -15,6 +15,7 @@ public:
 	void introduce() const;
 
 	std::string getName()const;
+	void 		getPolymorphed() const;
 };
 
 std::ostream &operator<<(std::ostream &o, const Victim &);

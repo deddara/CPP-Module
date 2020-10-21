@@ -29,6 +29,10 @@ void Sorcerer::introduce() const {
 	std::cout << "I am " << _name << ", " << _title << ", and i like ponies!" << std::endl;
 }
 
+void Sorcerer::polymorph(Victim const &vic) const{
+	vic.getPolymorphed();
+}
+
 std::ostream & operator<<(std::ostream & o, Sorcerer const & src)
 {
 	o << "I am " << src.getName() << ", " << src.getTitle() << ", and i like ponies!" << std::endl;
