@@ -18,7 +18,7 @@ public:
 	std::string getName() const;
 	int getAPCost() const;
 	int getDamage() const;
-	void attack() const = 0;
+	virtual void attack() const = 0;
 };
 
 #endif
