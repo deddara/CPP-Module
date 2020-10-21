@@ -14,5 +14,5 @@ Peon::Peon(const Peon &cpy) : Victim(cpy) {
 }
 
 void Peon::getPolymorphed() const {
-	std::cout << _name << "has been turned into a pink pony!" << std::endl;
+	std::cout << _name << " has been turned into a pink pony!" << std::endl;
 }

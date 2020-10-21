@@ -26,7 +26,7 @@ Sorcerer &Sorcerer::operator=(const Sorcerer &sec_arg) {
 }
 
 void Sorcerer::introduce() const {
-	std::cout << "I am " << _name << ", " << _title << ", and i like ponies!" << std::endl;
+	std::cout << "I am " << _name << ", " << _title << ", and I like ponies!" << std::endl;
 }
 
 void Sorcerer::polymorph(Victim const &vic) const{
@@ -35,6 +35,6 @@ void Sorcerer::polymorph(Victim const &vic) const{
 
 std::ostream & operator<<(std::ostream & o, Sorcerer const & src)
 {
-	o << "I am " << src.getName() << ", " << src.getTitle() << ", and i like ponies!" << std::endl;
+	o << "I am " << src.getName() << ", " << src.getTitle() << ", and I like ponies!" << std::endl;
 	return (o);
 }

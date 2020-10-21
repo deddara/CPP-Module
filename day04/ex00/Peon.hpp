@@ -7,7 +7,7 @@ public:
 	Peon(std::string name);
 	Peon(Peon const &);
 	~Peon();
-	void	getPolymorphed() const;
+	virtual void	getPolymorphed() const;
 };
 
 #endif
