@@ -6,7 +6,7 @@ class SuperMutant : public Enemy{
 
 public:
 	SuperMutant();
-	~SuperMutant();
+	virtual ~SuperMutant();
 	SuperMutant(SuperMutant const &);
 	SuperMutant & operator=(SuperMutant const &);
 	void takeDamage(int);

@@ -7,7 +7,7 @@ public:
 	RadScorpion();
 	RadScorpion(RadScorpion const &);
 	RadScorpion & operator=(RadScorpion const &);
-	~RadScorpion();
+	virtual ~RadScorpion();
 };
 
 #endif
