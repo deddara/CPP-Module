@@ -2,6 +2,7 @@
 # define SORCERER_HPP
 # include <iostream>
 # include <string>
+# include <ostream>
 
 class Sorcerer{
 
@@ -17,6 +18,9 @@ public:
 
 	std::string getName() const;
 	std::string getTitle() const;
+	void introduce()const;
 };
+
+std::ostream & operator<<(std::ostream & o, Sorcerer const & src);
 
 #endif

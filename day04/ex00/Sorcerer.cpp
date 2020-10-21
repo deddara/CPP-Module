@@ -24,3 +24,13 @@ Sorcerer &Sorcerer::operator=(const Sorcerer &sec_arg) {
 	this->_title = sec_arg.getTitle();
 	return *this;
 }
+
+void Sorcerer::introduce() const {
+	std::cout << "I am " << _name << ", " << _title << ", and i like ponies!" << std::endl;
+}
+
+std::ostream & operator<<(std::ostream & o, Sorcerer const & src)
+{
+	o << "I am " << src.getName() << ", " << src.getTitle() << ", and i like ponies!" << std::endl;
+	return (o);
+}
