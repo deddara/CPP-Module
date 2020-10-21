@@ -8,8 +8,8 @@ class Character
 {
 private:
 	std::string _name;
-	int 		ap;
-	AWeapon		*wpn;
+	int 		_ap;
+	AWeapon		*_wpn;
 
 public:
 	Character(std::string const & name);
