@@ -1,7 +1,7 @@
 #ifndef AMATERIA_H
 # define AMATERIA_H
 # include <string>
-
+# include "ICharacter.hpp"
 class AMateria{
 
 private:
@@ -17,7 +17,7 @@ public:
 	std::string const & getType() const;
 	unsigned int getXP() const;
 	virtual AMateria* clone() const = 0;
-//	virtual void use(ICharacter& target);
+	virtual void use(ICharacter& target);
 
 };
 

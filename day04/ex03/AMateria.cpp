@@ -25,3 +25,7 @@ AMateria & AMateria::operator=(const AMateria &sec_arg) {
 	_xp = sec_arg.getXP();
 	return (*this);
 }
+
+void 	AMateria::use(ICharacter &target) {} {
+	_xp += 10;
+}

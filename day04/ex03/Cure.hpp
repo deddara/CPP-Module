@@ -7,6 +7,7 @@ public:
 	Cure();
 	Cure(Cure const &);
 	virtual ~Cure();
+	virtual void use(ICharacter& target);
 	Cure & operator=(Cure const &);
 	Cure * clone();
 };

@@ -16,3 +16,8 @@ Ice &Ice::operator=(const Ice &sec_arg) {
 	AMateria::operator=(sec_arg);
 	return (*this);
 }
+
+void 	Ice::use(ICharacter &target) {
+	AMateria::use(target);
+	std::cout << "* shoots an ice bolt at " << target.getName()<< "*" << std::endl;
+}

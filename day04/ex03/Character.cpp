@@ -61,3 +61,14 @@ void 				Character::equip(AMateria *m) {
 	}
 }
 
+void 				Character::unequip(int idx) {
+	if (_materia[idx] == nullptr || idx < 0 || idx > 3)
+		return;
+	_materia[idx] = nullptr;
+}
+
+void 				Character::use(int idx, Character &target) {
+	if (idx < 0 || idx > 3 || _materia[idx] == nullptr)
+		return ;
+	_materia[idx]->use(target);
+}
