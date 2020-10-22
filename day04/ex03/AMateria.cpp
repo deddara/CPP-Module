@@ -19,6 +19,9 @@ unsigned int AMateria::getXP() const {
 }
 
 AMateria & AMateria::operator=(const AMateria &sec_arg) {
+	if (this == &sec_arg)
+		return (*this);
 	_type = sec_arg.getType();
 	_xp = sec_arg.getXP();
+	return (*this);
 }
