@@ -1,4 +1,5 @@
 #include "TacticalMarine.hpp"
+#include "AssaultTerminator.hpp"
 #include "Squad.hpp"
 #include <iostream>
 #include <string>
@@ -6,18 +7,17 @@
 int main()
 {
 	ISpaceMarine* bob = new TacticalMarine;
-	ISpaceMarine* bob2 = new TacticalMarine;
-
-	ISpaceMarine* bob1 = nullptr;
-
+	ISpaceMarine* jim = new AssaultTerminator;
 	ISquad* vlc = new Squad;
-	ISquad* vlc2 = new Squad;
-
 	vlc->push(bob);
-	vlc->push(bob2);
-	*vlc2 = *vlc;
+	vlc->push(jim);
+	for (int i = 0; i < vlc->getCount(); ++i)
+	{
+		ISpaceMarine* cur = vlc->getUnit(i);
+		cur->battleCry();
+		cur->rangedAttack();
+		cur->meleeAttack();
+	}
 	delete vlc;
-//	cur->battleCry();
-//	cur->rangedAttack();
-//	cur->meleeAttack();
+	return 0;
 }
