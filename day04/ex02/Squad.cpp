@@ -1,6 +1,6 @@
 #include "Squad.hpp"
 #include <string>
-
+# include <iostream>
 Squad::Squad() {
 	_count = 0;
 	_squad = new t_squad;
@@ -13,13 +13,26 @@ Squad::Squad(Squad const &cpy) {
 	*this = cpy;
 }
 
-Squad::~Squad() { return; }
+Squad::~Squad() {
+	t_squad *tmp;
+
+	tmp = _squad;
+	while (tmp != nullptr)
+	{
+		if (tmp->unit != nullptr)
+			delete tmp->unit;
+		t_squad *tmp1 = tmp;
+		tmp = tmp->next;
+		delete tmp1;
+	}
+	return;
+}
 
 int Squad::getCount() const {
 	return (_count);
 }
 
-Squad & Squad::operator=(const Squad &sec_arg) {
+Squad & Squad::operator=(Squad const & sec_arg) {
 	if (this == &sec_arg)
 		return (*this);
 	t_squad *tmp = _squad;
