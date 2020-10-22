@@ -1,6 +1,6 @@
 #include "Character.hpp"
 #include <string>
-
+#include <iostream>
 Character::Character(std::string name) : _name(name) {
 	int i = 0;
 	while (i < 4)
@@ -17,7 +17,6 @@ Character::~Character(){
 	{
 		if (_materia[i] != nullptr) {
 			delete _materia[i];
-			_materia[i] = nullptr;
 		}
 		i++;
 	}
@@ -67,8 +66,9 @@ void 				Character::unequip(int idx) {
 	_materia[idx] = nullptr;
 }
 
-void 				Character::use(int idx, Character &target) {
-	if (idx < 0 || idx > 3 || _materia[idx] == nullptr)
-		return ;
+void 				Character::use(int idx, ICharacter &target) {
+	if (idx < 0 || idx > 3 || _materia[idx] == nullptr) {
+		return;
+	}
 	_materia[idx]->use(target);
 }

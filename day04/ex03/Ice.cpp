@@ -1,18 +1,19 @@
 #include "Ice.hpp"
+#include <iostream>
 
 Ice::Ice() : AMateria("ice") { return; }
 
-Ice::Ice(const Ice &ice) { *this = ice; }
+Ice::Ice(const Ice &ice) : AMateria(ice) { return; }
 
 Ice::~Ice() { return; }
 
-Ice * Ice::clone() {
+Ice * Ice::clone() const {
 	Ice *ic = new Ice(*this);
 	return (ic);
 }
 
 
-Ice &Ice::operator=(const Ice &sec_arg) {
+Ice &Ice::operator=(const AMateria &sec_arg){
 	AMateria::operator=(sec_arg);
 	return (*this);
 }

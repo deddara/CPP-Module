@@ -16,7 +16,7 @@ public:
 	virtual ~MateriaSource();
 
 	virtual void learnMateria(AMateria *);
-	virtual AMateria* createMateria(std::string consr & type);
+	virtual AMateria* createMateria(std::string const & type);
 };
 
 #endif

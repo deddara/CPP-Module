@@ -1,7 +1,7 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const & type) : _type(type) _xp(0){
-	retrun ;
+AMateria::AMateria(std::string const & type) : _type(type), _xp(0){
+	return ;
 }
 
 AMateria::AMateria(AMateria const &cp) {
@@ -10,7 +10,7 @@ AMateria::AMateria(AMateria const &cp) {
 
 AMateria::~AMateria() { return ;}
 
-std::string AMateria::getType() const {
+std::string const & AMateria::getType() const {
 	return (_type);
 }
 
@@ -26,6 +26,7 @@ AMateria & AMateria::operator=(const AMateria &sec_arg) {
 	return (*this);
 }
 
-void 	AMateria::use(ICharacter &target) {} {
+void 	AMateria::use(ICharacter &target) {
+	(void)target;
 	_xp += 10;
 }
