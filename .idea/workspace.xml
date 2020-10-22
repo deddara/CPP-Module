@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -10,7 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11a90b1b-eee5-4d59-8128-f1da5ec265e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex00/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex01/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex02/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/ex03/a.out" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ipbHX9cvZffHOn6yI6saLU1GiP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,13 +46,6 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,6 +67,11 @@
       <workItem from="1602939014194" duration="2163000" />
       <workItem from="1603119495041" duration="9733000" />
       <workItem from="1603179282062" duration="15393000" />
+      <workItem from="1603267671718" duration="8513000" />
+      <workItem from="1603286067092" duration="9627000" />
+      <workItem from="1603301041068" duration="1036000" />
+      <workItem from="1603353393651" duration="14035000" />
+      <workItem from="1603378810743" duration="4687000" />
     </task>
     <servers />
   </component>
@@ -84,10 +91,10 @@
       <screen x="0" y="23" width="2560" height="1328" />
     </state>
     <state x="945" y="349" key="run.anything.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1603206979529" />
-    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup" timestamp="1603191031686">
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup" timestamp="1603355865523">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603191031686" />
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603355865523" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1602784477885" />
   </component>
 </project>

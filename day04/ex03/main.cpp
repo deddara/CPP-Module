@@ -50,6 +50,6 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	myTest();
+//	myTest();
 	return 0;
 }
