@@ -1,6 +1,6 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const & type) : _type(type) {
+AMateria::AMateria(std::string const & type) : _type(type) _xp(0){
 	retrun ;
 }
 
