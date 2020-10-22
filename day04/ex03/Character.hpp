@@ -8,10 +8,10 @@ class Character : public ICharacter
 {
 private:
 	std::string _name;
-	AMateria	*_materia;
+	AMateria	*_materia[4];
 
 public:
-	Character();
+	Character(std::string name);
 	Character(Character const &);
 	~Character();
 	Character & operator=(Character const &);
