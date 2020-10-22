@@ -15,8 +15,8 @@ typedef struct	s_squad
 class Squad : public ISquad
 {
 private:
-	t_squad *squad;
-	static int count;
+	t_squad		*_squad;
+	static int	count;
 
 public:
 	Squad();
@@ -26,6 +26,8 @@ public:
 	int				getCount() const;
 	int				push(ISpaceMarine*);
 	ISpaceMarine*	getUnit(int) const;
+
+	t_squad 		*newUnit(ISpaceMarine*);
 
 };
 
