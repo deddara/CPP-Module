@@ -28,6 +28,7 @@ public:
 	ISpaceMarine*	getUnit(int) const;
 
 	t_squad 		*newUnit(ISpaceMarine*);
+	bool 			checkExist(ISpaceMarine*);
 
 };
 

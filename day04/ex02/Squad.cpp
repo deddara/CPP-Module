@@ -28,8 +28,19 @@ ISpaceMarine *Squad::getUnit(int n) const {
 	return (tmp->unit);
 }
 
+bool	Squad::checkExist(ISpaceMarine *unit) {
+	t_squad *tmp = _squad;
+	while (tmp != nullptr)
+	{
+		if (tmp->unit == unit)
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
 int Squad::push(ISpaceMarine *unit) {
-	if (unit == nullptr)
+	if (unit == nullptr || this->checkExist(unit))
 		return (_count);
 
 	if (_count == 0)
@@ -45,5 +56,6 @@ int Squad::push(ISpaceMarine *unit) {
 	new_unit->unit = unit;
 	new_unit->next = nullptr;
 	tmp->next = new_unit;
+	_count++;
 	return (_count);
 }
