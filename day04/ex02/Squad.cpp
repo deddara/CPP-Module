@@ -1,5 +1,5 @@
 #include "Squad.hpp"
-
+#include <string>
 int Squad::_count = 0;
 
 Squad::Squad() {
@@ -16,7 +16,7 @@ int Squad::getCount() const {
 }
 
 ISpaceMarine *Squad::getUnit(int n) const {
-	if (n > _count || n < 0 || _count == 0)
+	if (n + 1 > _count || n < 0 || _count == 0)
 		return (nullptr);
 	int i = 0;
 	t_squad *tmp = _squad;

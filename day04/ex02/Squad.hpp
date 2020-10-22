@@ -16,11 +16,11 @@ class Squad : public ISquad
 {
 private:
 	t_squad		*_squad;
-	static int	count;
+	static int	_count;
 
 public:
 	Squad();
-	Squad(Squad const &);
+//	Squad(Squad const &);
 	virtual ~Squad();
 
 	int				getCount() const;

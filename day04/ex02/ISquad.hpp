@@ -1,5 +1,6 @@
 #ifndef ISQUAD_H
 # define ISQUAD_H
+# include "TacticalMarine.hpp"
 
 class ISquad
 {
