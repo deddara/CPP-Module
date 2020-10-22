@@ -7,6 +7,7 @@ public:
 	Ice();
 	Ice(Ice const &);
 	virtual ~Ice();
+	Ice 	*clone();
 	Ice &operator=(Ice const &);
 };
 

@@ -8,6 +8,7 @@ public:
 	Cure(Cure const &);
 	virtual ~Cure();
 	Cure & operator=(Cure const &);
+	Cure * clone();
 };
 
 #endif
