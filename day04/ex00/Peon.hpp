@@ -6,6 +6,7 @@ class Peon : public Victim {
 public:
 	Peon(std::string name);
 	Peon(Peon const &);
+	Peon & operator=(Peon const &);
 	~Peon();
 	virtual void	getPolymorphed() const;
 };
