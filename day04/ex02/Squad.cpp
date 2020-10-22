@@ -1,18 +1,47 @@
 #include "Squad.hpp"
 #include <string>
-int Squad::_count = 0;
 
 Squad::Squad() {
+	_count = 0;
 	_squad = new t_squad;
 	_squad->next = nullptr;
 	_squad->unit = nullptr;
 	return ;
 }
 
+Squad::Squad(Squad const &cpy) {
+	*this = cpy;
+}
+
 Squad::~Squad() { return; }
 
 int Squad::getCount() const {
 	return (_count);
+}
+
+Squad & Squad::operator=(const Squad &sec_arg) {
+	if (this == &sec_arg)
+		return (*this);
+	t_squad *tmp = _squad;
+	while (tmp != nullptr)
+	{
+		t_squad *tmp1 = tmp;
+		if (tmp->unit != nullptr)
+			delete tmp->unit;
+		tmp = tmp->next;
+		delete tmp1;
+	}
+	_count = 0;
+	_squad = new t_squad;
+	_squad->next = nullptr;
+	_squad->unit = nullptr;
+	int i = 0;
+	while (i < sec_arg.getCount())
+	{
+		this->push(sec_arg.getUnit(i)->clone());
+		i++;
+	}
+	return (*this);
 }
 
 ISpaceMarine *Squad::getUnit(int n) const {

@@ -16,12 +16,13 @@ class Squad : public ISquad
 {
 private:
 	t_squad		*_squad;
-	static int	_count;
+	int	_count;
 
 public:
 	Squad();
-//	Squad(Squad const &);
+	Squad(Squad const &);
 	virtual ~Squad();
+	Squad & operator=(Squad const &);
 
 	int				getCount() const;
 	int				push(ISpaceMarine*);
