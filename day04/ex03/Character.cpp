@@ -46,3 +46,18 @@ Character & Character::operator=(const Character &sec_arg) {
 
 std::string	const & Character::getName() const { return _name;}
 
+void 				Character::equip(AMateria *m) {
+	if (m == nullptr)
+		return;
+	int i = 0;
+	while (i < 4)
+	{
+		if (_materia[i] == nullptr)
+		{
+			_materia[i] = m;
+			return ;
+		}
+		i++;
+	}
+}
+
