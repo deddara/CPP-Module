@@ -8,11 +8,11 @@ private:
 	std::string const	_name;
 	int 				_grade;
 	Bureaucrat & operator=(Bureaucrat const &);
-	Bureaucrat();
+	Bureaucrat(){};
 
 public:
 
-	Bureaucrat(std::string _name, int _grade);
+	Bureaucrat(std::string name, int grade);
 	Bureaucrat(Bureaucrat const &);
 
 	std::string const & getName() const;
