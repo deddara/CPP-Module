@@ -2,6 +2,7 @@
 # define FORM_H
 # include <string>
 # include <ostream>
+# include <iostream>
 # include "main.hpp"
 
 class Form

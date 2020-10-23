@@ -30,6 +30,17 @@ void 		Form::beSigned(Bureaucrat &bur) {
 		_signed = 1;
 }
 
+std::ostream &operator<<(std::ostream &o, Form const &form)
+{
+	o << form.getName() << " requires: " << form.getSignExec() << " for execution. " \
+	<< form.getSignReq() << " for signing. Status: ";
+	if (form.getSigned() == 0)
+		o << "not signed" << std::endl;
+	else
+		o << "is signed" << std::endl;
+	return (o);
+}
+
 const char * Form::GradeTooHighException::what() const throw() {
 		return "Grade is too high!";
 }

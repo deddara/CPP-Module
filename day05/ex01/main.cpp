@@ -47,7 +47,10 @@ int main()
 	try {
 		Bureaucrat Andrej("Andre", 15);
 		Form form("Form", 20, 30);
+		std::cout << form;
 		Andrej.signForm(form);
+		std::cout << form;
+
 	}
 	catch (std::exception &ex) {
 		std::cout << ex.what() << std::endl;
