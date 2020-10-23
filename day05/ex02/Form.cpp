@@ -13,7 +13,10 @@ _sign_req(cp._sign_req){return ; }
 
 Form::~Form() {return ;}
 
-Form & Form::operator=(const Form &sec) { (void)sec; return (*this) ;}
+Form & Form::operator=(const Form &sec) {
+	_target = sec.getTarget();
+	return (*this);
+}
 
 std::string Form::getName() const { return _name; }
 
@@ -22,6 +25,8 @@ bool 		Form::getSigned() const { return _signed; }
 int 		Form::getSignExec() const { return _sign_exec; }
 
 int 		Form::getSignReq() const { return _sign_req; }
+
+std::string Form::getTarget() const { return _target;}
 
 void 		Form::beSigned(Bureaucrat &bur) {
 	if (bur.getGrade() > _sign_req)

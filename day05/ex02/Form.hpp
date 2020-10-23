@@ -13,7 +13,7 @@ private:
 	int const			_sign_exec;
 	int const			_sign_req;
 	std::string const	_target;
-	Form & operator=(Form const &);
+
 	Form();
 
 public:
@@ -21,10 +21,12 @@ public:
 	Form(Form const &);
 	~Form();
 
+	Form & operator=(Form const &);
 	std::string			getName() const;
 	bool 				getSigned() const;
 	int 				getSignReq() const;
 	int 				getSignExec() const;
+	std::string 		getTarget() const;
 
 	virtual void 		execute(Bureaucrat const & executor) const = 0;
 	void 				beSigned(Bureaucrat &);
