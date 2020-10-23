@@ -4,7 +4,7 @@
 # include <sstream>
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137, target), _target(target) { return ; }
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137, target) { return ; }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {return ;}
 
@@ -24,7 +24,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 		throw Form::NotSignedException();
 
 	std::string file;
-	file = this->_target;
+	file = this->getTarget();
 	file += "_shrubbery";
 	std::string file_data = "         v\n"
 							"        >X<\n"

@@ -77,7 +77,7 @@ int main()
 //		std::cout << ex.what() << std::endl;
 //	}
 try {
-		Bureaucrat Andrej("Andre", 15);
+		Bureaucrat Andrej("Andre", 138);
 		ShrubberyCreationForm form("les");
 		Andrej.signForm(form);
 		form.execute(Andrej);
