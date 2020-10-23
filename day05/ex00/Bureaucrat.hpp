@@ -1,6 +1,7 @@
 #ifndef  Bureaucrat_h
 # define Bureaucrat_h
 # include <string>
+# include <ostream>
 
 class Bureaucrat{
 
@@ -31,8 +32,9 @@ class GradeTooLowException : public std::exception{
 		virtual const char * what() const throw();
 };
 
-
 };
+
+std::ostream & operator<<(std::ostream &o, Bureaucrat const &);
 
 
 #endif
