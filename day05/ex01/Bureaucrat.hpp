@@ -2,6 +2,7 @@
 # define Bureaucrat_h
 # include <string>
 # include <ostream>
+# include "Form.hpp"
 
 class Bureaucrat{
 
@@ -22,10 +23,11 @@ public:
 
 	void 				incGrade();
 	void 				decGrade();
+	void 				signForm(Form const &);
 
 class GradeTooHighException : public std::exception{
-public:
-	virtual const char * what() const throw();
+	public:
+		virtual const char * what() const throw();
 };
 
 class GradeTooLowException : public std::exception{
