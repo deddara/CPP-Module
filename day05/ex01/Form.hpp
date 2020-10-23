@@ -2,20 +2,20 @@
 # define FORM_H
 # include <string>
 # include <ostream>
-# include "Bureaucrat.hpp"
+# include "main.hpp"
 
 class Form
 {
 private:
 	std::string const	_name;
 	bool 				_signed;
-	int const			_sign_req;
 	int const			_sign_exec;
+	int const			_sign_req;
 	Form & operator=(Form const &);
 	Form();
 
 public:
-	Form(std::string name, bool signed_, int sign_req, int sign_exec);
+	Form(std::string name, int sign_req, int sign_exec);
 	Form(Form const &);
 	~Form();
 
@@ -24,7 +24,7 @@ public:
 	int 				getSignReq() const;
 	int 				getSignExec() const;
 
-	void 				beSigned(Bureaucrat const &);
+	void 				beSigned(Bureaucrat &);
 
 class GradeTooHighException : public std::exception{
 public:
