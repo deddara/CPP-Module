@@ -15,6 +15,7 @@ public:
 
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(Bureaucrat const &);
+	~Bureaucrat();
 
 	std::string const & getName() const;
 	int 				getGrade() const;
