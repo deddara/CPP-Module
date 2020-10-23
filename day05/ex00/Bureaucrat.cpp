@@ -10,6 +10,29 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 		_grade = grade;
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat &cp) : _name(cp._name) , _grade(cp._grade) { return ; }
+
+Bureaucrat & Bureaucrat::operator=(const Bureaucrat &sec_arg) {
+	(void)sec_arg;
+	return *this;
+}
+
+int 		Bureaucrat::getGrade() const { return _grade; }
+
+std::string const & Bureaucrat::getName() const { return _name; }
+
+void 		Bureaucrat::decGrade() {
+	_grade++;
+	if (grade > 150)
+		throw(GradeTooLowException);
+}
+
+void 		Bureaucrat::incGrade() {
+	_grade--;
+	if (grade < 1)
+		throw (GradeTooHighException);
+}
+
 const char * GradeTooHighException::what() const throw()
 {
 	std::cout << "Grade is too high!" << std::endl;
