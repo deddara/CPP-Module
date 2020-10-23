@@ -15,9 +15,9 @@ public:
 	Intern & operator=(Intern const &);
 
 	Form * makeForm(std::string name, std::string target);
-	RobotomyRequestForm* new_robo(std::string target);
-	ShrubberyCreationForm * new_shr(std::string target);
-	PresidentialPardonForm * new_president(std::string target);
+	Form* new_robo(std::string target);
+	Form * new_shr(std::string target);
+	Form * new_president(std::string target);
 
 };
 
