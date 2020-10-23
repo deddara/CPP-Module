@@ -2,6 +2,7 @@
 # define FORM_H
 # include <string>
 # include <ostream>
+# include "Bureaucrat.hpp"
 
 class Form
 {
@@ -14,9 +15,16 @@ private:
 	Form();
 
 public:
-	Form(std::string name, bool signed, int sign_req, int sign_exec);
+	Form(std::string name, bool signed_, int sign_req, int sign_exec);
 	Form(Form const &);
 	~Form();
+
+	std::string			getName() const;
+	bool 				getSigned() const;
+	int 				getSignReq() const;
+	int 				getSignExec() const;
+
+	void 				beSigned(Bureaucrat const &);
 
 class GradeTooHighException : public std::exception{
 public:
