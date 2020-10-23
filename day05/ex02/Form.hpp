@@ -12,14 +12,14 @@ private:
 	bool 				_signed;
 	int const			_sign_exec;
 	int const			_sign_req;
-	std::string const	_target;
+	std::string 	_target;
 
 	Form();
 
 public:
 	Form(std::string name, int sign_req, int sign_exec, std::string target);
 	Form(Form const &);
-	~Form();
+	virtual ~Form();
 
 	Form & operator=(Form const &);
 	std::string			getName() const;
@@ -37,6 +37,12 @@ public:
 };
 
 class GradeTooLowException : public std::exception
+{
+public:
+	virtual const char * what() const throw();
+};
+
+class NotSignedException : public std::exception
 {
 public:
 	virtual const char * what() const throw();

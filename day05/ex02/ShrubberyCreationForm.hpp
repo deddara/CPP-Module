@@ -1,10 +1,14 @@
 #ifndef ShrubberyCreationForm_h
 # define ShrubberyCreationForm_h
 # include "main.hpp"
+# include "Form.hpp"
 # include <string>
 
 class ShrubberyCreationForm : public Form
 {
+private:
+	std::string _target;
+
 public:
 	ShrubberyCreationForm(std::string target);
 	ShrubberyCreationForm(ShrubberyCreationForm const &);
