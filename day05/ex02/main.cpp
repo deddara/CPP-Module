@@ -2,88 +2,35 @@
 #include <iostream>
 #include "Form.hpp"
 # include "ShrubberyCreationForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
+
+void ex01test()
+{
+	Bureaucrat bur("Bur", 10);
+	Bureaucrat bur3("Bur", 1);
+	Bureaucrat	bur1("Bur1", 130);
+	PresidentialPardonForm pres("Putin");
+	RobotomyRequestForm		rob("Robo");
+	ShrubberyCreationForm	tree("Tree");
+
+	std::cout << pres << rob << tree;
+	std::cout << "-------------" << std::endl;
+	bur.executeForm(rob);
+	bur.signForm(rob);
+	std::cout << rob;
+	bur.executeForm(rob);
+	std::cout << "-------------" << std::endl;
+	bur1.signForm(pres);
+	bur.signForm(pres);
+	bur.executeForm(pres);
+	bur3.executeForm(pres);
+	std::cout << "-------------" << std::endl;
+	bur.signForm(tree);
+	bur.executeForm(tree);
+}
+
 int main()
 {
-//	try {
-//		Bureaucrat anton("Anton", 10);
-//		std::cout << anton;
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat anton("Anton", 0);
-//		std::cout << anton;
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat anton("Anton", 151);
-//		std::cout << anton;
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat anton("Anton", 1);
-//		std::cout << anton;
-//		anton.incGrade();
-//		std::cout << anton;
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat anton("Anton", 150);
-//		std::cout << anton;
-//		anton.decGrade();
-//		std::cout << anton;
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	std::cout << "------------------------------" << std::endl;
-//	try {
-//		Bureaucrat Andrej("Andre", 15);
-//		Form form("Form", 20, 30);
-//		Andrej.signForm(form);
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat Andrej("Andre", 15);
-//		Form form("Form", 151, 30);
-//		Andrej.signForm(form);
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat Andrej("Andre", 15);
-//		Form form("Form", 0, 30);
-//		Andrej.signForm(form);
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-//	try {
-//		Bureaucrat Andrej("Andre", 15);
-//		Form form("Form", 14, 30);
-//		Andrej.signForm(form);
-//	}
-//	catch (std::exception &ex) {
-//		std::cout << ex.what() << std::endl;
-//	}
-try {
-		Bureaucrat Andrej("Andre", 138);
-		ShrubberyCreationForm form("les");
-		Andrej.signForm(form);
-		form.execute(Andrej);
-
-}
-catch (std::exception &ex) {
-	std::cout << ex.what() << std::endl;
-}
+	ex01test();
 }

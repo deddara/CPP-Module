@@ -24,8 +24,9 @@ public:
 	void 				incGrade();
 	void 				decGrade();
 	void 				signForm(Form &);
+	void				executeForm(Form const & form);
 
-class GradeTooHighException : public std::exception{
+	class GradeTooHighException : public std::exception{
 	public:
 		virtual const char * what() const throw();
 };
