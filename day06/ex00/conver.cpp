@@ -47,7 +47,16 @@ bool checkStr(std::string arg, Num &num)
 		num.setType("char");
 		return (0);
 	}
-	return(1);
+	try {
+		double check_str = std::stod(arg);
+		std::cout << check_str;
+		(void)check_str;
+	}
+	catch (std::exception &ex) {
+		std::cout << "Is not valid value" << std::endl;
+		return (1);
+	}
+	return(0);
 }
 
 int main(int argc, char **argv)
@@ -66,4 +75,5 @@ int main(int argc, char **argv)
 	if (checkStr(arg, num))
 		return (1);
 	std::cout << num.getType();
+	return (0);
 }
