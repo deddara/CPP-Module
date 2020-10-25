@@ -1,14 +1,6 @@
 #include <iostream>
 #include <string>
-
-class Num{
-private:
-	std::string _type;
-
-public:
-	void 	setType(std::string type) { _type = type;}
-	std::string getType() { return _type; }
-};
+# include "ConverClass.hpp"
 
 int 		checkInfNan(std::string arg, Num &num)
 {
@@ -56,7 +48,21 @@ bool checkStr(std::string arg, Num &num)
 		std::cout << "Is not valid value" << std::endl;
 		return (1);
 	}
+	std::size_t found = arg.find(".");
+	if (found!=std::string::npos)
+		num.setType("double");
+	else
+		num.setType("int");
 	return(0);
+}
+
+void	numHandler(std::string arg, Num & num)
+{
+	if (num.getType() == "char")
+	{
+		char num = arg[0];
+		std::cout << num;
+	}
 }
 
 int main(int argc, char **argv)
@@ -69,11 +75,11 @@ int main(int argc, char **argv)
 	}
 
 	std::string arg = argv[1];
-	std::string type;
 	if (checkInfNan(arg, num))
 		return (infNanHandler(num));
 	if (checkStr(arg, num))
 		return (1);
-	std::cout << num.getType();
+	numHandler(arg, num);
+//	std::cout << num.getType();
 	return (0);
 }
