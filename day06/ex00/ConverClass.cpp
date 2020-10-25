@@ -1,6 +1,6 @@
 #include "ConverClass.hpp"
 #include "iostream"
-
+#include <iomanip>
 void Num::setDispl(int num) {
 	if ((num >= 0 && num <= 31) || num == 127)
 		_char_displ = 1;
@@ -50,7 +50,8 @@ double Num::getDouble() {return number_d; }
 void	Num::makeCast(int number) {
 	if (_overflow == 1)
 	{
-		std::cout << "char: impossible" << std::endl << "int: overflow" << "\nfloat: can't get value" << std::endl << "double: can't get value" << std::endl;
+		std::cout << "char: impossible" << std::endl << "int: overflow" << "\nfloat: can't get value" << std::endl \
+		<< "double: can't get value" << std::endl;
 		return;
 	}
 	c = static_cast<char>(number);
@@ -58,7 +59,7 @@ void	Num::makeCast(int number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (number <= 0 || number > 127)
+	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
 		std::cout << "char: " << c << std::endl;
@@ -68,7 +69,8 @@ void	Num::makeCast(int number) {
 		std::cout << "int: overflow" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << f << ".0f" << std::endl << "double: " << d << ".0" << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f" << \
+	std::endl << "double: " << std::fixed << std::setprecision(1) << d  << std::endl;
 }
 
 void	Num::makeCast(char number) {
@@ -77,7 +79,7 @@ void	Num::makeCast(char number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (number <= 0 || number > 127)
+	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
 		std::cout << "char: " << c << std::endl;
@@ -93,7 +95,7 @@ void	Num::makeCast(double number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (number <= 0 || number > 127)
+	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
 		std::cout << "char: " << c << std::endl;
@@ -103,8 +105,5 @@ void	Num::makeCast(double number) {
 		std::cout << "int: overflow" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;
-	if (number == 0)
-		std::cout << "float: " << f << std::endl << ".0f" << "double: " << d << ".0" << std::endl;
-	else
-		std::cout << "float: " << f << std::endl << "f" << "double: " << d << std::endl;
+		std::cout << "float: " << std::fixed << std::setprecision(1) << f<< "f" << std::endl << "double: " << std::fixed << std::setprecision(1) << d << std::endl;
 }
