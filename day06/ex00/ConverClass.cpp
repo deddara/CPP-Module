@@ -62,7 +62,7 @@ void	Num::makeCast(int number) {
 	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
-		std::cout << "char: " << c << std::endl;
+		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: not displayable" << std::endl;
 	if (_overflow == 1)
@@ -82,7 +82,7 @@ void	Num::makeCast(char number) {
 	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
-		std::cout << "char: " << c << std::endl;
+		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: not displayable" << std::endl;
 	std::cout << "int: " << i << std::endl << \
@@ -98,13 +98,13 @@ void	Num::makeCast(double number) {
 	if (number < 0 || number > 127)
 		std::cout << "char: impossible" << std::endl;
 	else if (this->getDispl() == 0)
-		std::cout << "char: " << c << std::endl;
+		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: not displayable" << std::endl;
 	if (_overflow == 1)
 		std::cout << "int: overflow" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;
-		std::cout << "float: " << std::fixed << std::setprecision(1) << f<< "f" << std::endl \
-		<< "double: " << std::fixed << std::setprecision(1) << d << std::endl;
+		std::cout << "float: " << std::setprecision(1) << std::fixed << f << "f" << std::endl \
+		<< "double: " << std::setprecision(1) << std::fixed << d << std::endl;
 }
