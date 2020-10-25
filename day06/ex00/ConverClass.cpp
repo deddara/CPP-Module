@@ -46,7 +46,9 @@ void	Num::makeCast(int number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (this->getDispl() == 0)
+	if (number <= 0 || number > 127)
+		std::cout << "char: impossible" << std::endl;
+	else if (this->getDispl() == 0)
 	{
 		std::cout << "char: " << c << std::endl;
 	}
@@ -62,7 +64,9 @@ void	Num::makeCast(char number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (this->getDispl() == 0)
+	if (number <= 0 || number > 127)
+		std::cout << "char: impossible" << std::endl;
+	else if (this->getDispl() == 0)
 		std::cout << "char: " << c << std::endl;
 	else
 		std::cout << "char: not displayable" << std::endl;
@@ -76,7 +80,9 @@ void	Num::makeCast(double number) {
 	f = static_cast<float>(number);
 	i = static_cast<int>(number);
 	this->setDispl(c);
-	if (this->getDispl() == 0)
+	if (number <= 0 || number > 127)
+		std::cout << "char: impossible" << std::endl;
+	else if (this->getDispl() == 0)
 		std::cout << "char: " << c << std::endl;
 	else
 		std::cout << "char: not displayable" << std::endl;
