@@ -5,15 +5,11 @@ struct Data { std::string s1; int n; std::string s2; };
 
 Data * deserialize(void * raw){
 	struct Data *data = new struct Data;
-
 	char *raw_c = static_cast<char *>(raw);
 
-	data->s1.assign(reinterpret_cast<char*>(raw_c), 8);
+	data->s1.assign(static_cast<char*>(raw_c), 8);
 	data->n = *reinterpret_cast<int*>(&raw_c[8]);
-	raw_c += 12;
-	data->s2.assign(reinterpret_cast<char*>(raw_c), 8);
-	std::cout << data->s1 << std::endl << data->s2 << std::endl;
-	std::cout << data->n;
+	data->s2.assign(static_cast<char*>(&raw_c[12]), 8);
 	return (data);
 }
 
@@ -41,5 +37,7 @@ int main()
 {
 	void *p;
 	p = serialize();
-	deserialize(p);
+	Data *data = deserialize(p);
+	std::cout << data->s1 << std::endl << data->s2 << std::endl << data->n << std::endl;
+	delete data;
 }
