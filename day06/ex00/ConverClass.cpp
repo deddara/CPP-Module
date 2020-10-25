@@ -105,5 +105,6 @@ void	Num::makeCast(double number) {
 		std::cout << "int: overflow" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;
-		std::cout << "float: " << std::fixed << std::setprecision(1) << f<< "f" << std::endl << "double: " << std::fixed << std::setprecision(1) << d << std::endl;
+		std::cout << "float: " << std::fixed << std::setprecision(1) << f<< "f" << std::endl \
+		<< "double: " << std::fixed << std::setprecision(1) << d << std::endl;
 }
