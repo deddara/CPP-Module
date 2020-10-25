@@ -41,7 +41,6 @@ bool checkStr(std::string arg, Num &num)
 	}
 	try {
 		double check_str = std::stod(arg);
-		std::cout << check_str;
 		(void)check_str;
 	}
 	catch (std::exception &ex) {
@@ -56,13 +55,18 @@ bool checkStr(std::string arg, Num &num)
 	return(0);
 }
 
+
 void	numHandler(std::string arg, Num & num)
 {
+	if(num.convertNum(arg) == 1)
+		return ;
 	if (num.getType() == "char")
-	{
-		char num = arg[0];
-		std::cout << num;
-	}
+		num.makeCast(num.getChar());
+	else if (num.getType() == "int")
+		num.makeCast(num.getInt());
+	else if (num.getType() == "double")
+		num.makeCast(num.getDouble());
+
 }
 
 int main(int argc, char **argv)
@@ -80,6 +84,5 @@ int main(int argc, char **argv)
 	if (checkStr(arg, num))
 		return (1);
 	numHandler(arg, num);
-//	std::cout << num.getType();
 	return (0);
 }
