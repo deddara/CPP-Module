@@ -5,6 +5,7 @@ class Num{
 private:
 	std::string _type;
 	bool 		_char_displ;
+	bool 		_overflow;
 	int 		number;
 	char 		number_c;
 	double 		number_d;
@@ -14,7 +15,7 @@ private:
 	int i;
 
 public:
-	Num() : _char_displ(0) {}
+	Num() : _char_displ(0), _overflow(0) {}
 	void 	setType(std::string type) { _type = type;}
 	void 	setDispl(int num);
 	bool 	getDispl() {return _char_displ; }
