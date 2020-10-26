@@ -11,6 +11,8 @@ public:
 
 	void addNumber(int num);
 	void addNumber(std::vector<int>::iterator &it1, std::vector<int>::iterator &it2);
+	int shortestSpan(void);
+	int longestSpan(void);
 };
 
 #endif
