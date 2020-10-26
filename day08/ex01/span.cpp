@@ -1,5 +1,18 @@
 #include "span.hpp"
 # include <iostream>
+
+Span::Span(const Span &vp) {
+	*this = vp;
+}
+
+Span::~Span() {return ;}
+
+Span & Span::operator=(const Span &sec_arg) {
+	_n = sec_arg._n;
+	_numbers = sec_arg._numbers;
+	return (*this);
+}
+
 void Span::addNumber(int num) {
 	if (_numbers.size() == _n)
 		throw std::string("Array is already filled");
@@ -7,7 +20,7 @@ void Span::addNumber(int num) {
 		_numbers.push_back(num);
 }
 
-void Span::addNumber(std::vector<int>::iterator &it1, std::vector<int>::iterator &it2) {
+void Span::addNumber(std::vector<int>::iterator it1, std::vector<int>::iterator it2) {
 	while(it1 != it2)
 	{
 		if (_numbers.size() == _n)
