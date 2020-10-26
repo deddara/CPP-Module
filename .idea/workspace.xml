@@ -14,15 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="11a90b1b-eee5-4d59-8128-f1da5ec265e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex00/convert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex00/obj/ConverClass.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex00/obj/conver.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex01/obj/serialization.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex01/serialization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day06/ex01/serialization.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex01/serialize" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/base" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day06/ex02/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day06/ex02/obj/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/ex00/whatever.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day07/ex00/whatever.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/ex01/iter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/ex01/obj/iter.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/ex02/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day07/ex02/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +78,7 @@
       <workItem from="1603624154436" duration="4330000" />
       <workItem from="1603630744511" duration="4525000" />
       <workItem from="1603640743492" duration="6810000" />
+      <workItem from="1603701492163" duration="11366000" />
     </task>
     <servers />
   </component>
@@ -103,10 +99,10 @@
       <screen x="0" y="23" width="2560" height="1328" />
     </state>
     <state x="945" y="349" key="run.anything.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1603206979529" />
-    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup" timestamp="1603642249564">
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup" timestamp="1603710050519">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603642249564" />
+    <state x="945" y="329" width="670" height="734" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603710050519" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup/0.23.2560.1328@0.23.2560.1328" timestamp="1602784477885" />
   </component>
 </project>

@@ -99,5 +99,4 @@ int main()
 		std::cout << int_arr[i] << " ";
 	}
 	std::cout << std::endl;
-
 }
