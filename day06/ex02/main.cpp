@@ -67,5 +67,6 @@ int main()
 	base = generate();
 	identify_from_pointer(base);
 	identify_from_reference(*base);
+	delete base;
 	return (0);
 }

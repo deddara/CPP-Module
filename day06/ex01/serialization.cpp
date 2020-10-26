@@ -16,7 +16,7 @@ Data * deserialize(void * raw){
 void * serialize(void)
 {
 	std::srand(time(0));
-	char *raw_arr = new char(20);
+	char *raw_arr = new char[20];
 	int i = 0;
 	while (i < 8)
 	{
