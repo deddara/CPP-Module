@@ -25,7 +25,7 @@ public:
 		if (_arr)
 			delete [] _arr;
 		_arr = new T[sec_arg._n];
-		int i = 0;
+		unsigned int i = 0;
 		while (i < sec_arg._n)
 		{
 			_arr[i] = sec_arg._arr[i];
@@ -35,7 +35,7 @@ public:
 		return (*this);
 	}
 
-	T	&operator[](int const i)const
+	T	&operator[](unsigned int const i)const
 	{
 		if (i < 0 || i >= this->size())
 			throw std::out_of_range("Out of range");
