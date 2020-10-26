@@ -3,20 +3,19 @@
 template<typename T>
 void swap(T &val1, T & val2)
 {
-	T temp;
-	temp = val1;
+	T temp = val1;
 	val1 = val2;
 	val2 = temp;
 }
 
 template<typename T>
-T const &max(T const &val1, T const &val2)
+T const &max(T &val1, T &val2)
 {
 	return (val2 >= val1 ? val2 : val1);
 }
 
 template<typename T>
-T const &min(T const &val1, T const &val2)
+T const &min(T &val1, T &val2)
 {
 	return (val2 <= val1 ? val2 : val1);
 }
